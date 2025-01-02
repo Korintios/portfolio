@@ -1,6 +1,8 @@
-import Presentation from "@components/presentation/Presentation";
-import AboutMe from "@components/aboutMe/AboutMe";
-import Timeline from "@components/timeline/Timeline";
+import Presentation from "./components/presentation/Presentation";
+import AboutMe from "./components/aboutMe/AboutMe";
+import Timeline from "./components/timeline/Timeline";
+import WhyHire from "./components/whyHire/WhyHire";
+import Projects from "./components/projects/Projects";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
         <Presentation/>
         <AboutMe/>
         <Timeline/>
+        <WhyHire/>
+        <Projects/>
       </main>
   )
 }
