@@ -22,7 +22,7 @@ export default function Project({
                 <h1 className="text-3xl font-semibold">{tittle}</h1>
                 <p className="pr-5">{description}</p>
                 <div className="flex flex-row items-center gap-2">
-				{link && <a href={link} className="border border-black hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full">Ver Proyecto</a>}
+				{link && <a href={link} target="_blank" className="border border-black hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full">Ver Proyecto</a>}
                     <a href={github} className="flex items-center justify-center border border-black hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors rounded-full size-[42px]"><GitHub/></a>
                 </div>
             </div>
