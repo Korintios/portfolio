@@ -1,24 +1,141 @@
+import { useEffect, useMemo, useState } from "react";
+import { default as ALL_PROJECTS, ProjectType,} from "../../constants/PROJECTS";
 import Project from "./Project";
+import SkeletonProject from "./SkeletonProject";
 
 export default function Projects() {
-    return (
-        <div className="flex flex-col items-center h-screen w-full gap-10">
-            <div className="flex flex-row justify-between gap-5 w-full">
-                <h1 className="text-5xl font-bold leading-tight">Echale un ojo a mis <b className="text-gradient-blue">Proyectos</b></h1>
-                <button className="bg-[#0085ff] hover:bg-[#0084ffbd] text-white font-bold px-5 rounded-full transition-colors">Ver todos</button>
-            </div>
-            <div className="flex flex-wrap gap-5 w-full">
-                <Project/>
-                <Project/>
-                <Project/>
-                <Project/>
-            </div>
-            <div className="flex flex-wrap gap-3">
-            <button className="bg-[#f2f4f7] hover:bg-[#0085ff] text-black hover:text-white font-normal px-5 py-2 rounded-full transition-colors">HTML</button>
-            <button className="bg-[#f2f4f7] hover:bg-[#0085ff] text-black hover:text-white font-normal px-5 py-2 rounded-full transition-colors">CSS</button>
-            <button className="bg-[#f2f4f7] hover:bg-[#0085ff] text-black hover:text-white font-normal px-5 py-2 rounded-full transition-colors">JavaScript</button>
+	const [page, setPage] = useState<number>(1);
+	const itemsPerPage = 4;
+	const [filters, setFilters] = useState<Array<string>>([]);
+    const [activeFilters, setActiveFilters] = useState<Array<number>>([]);
+	const [findFilters, setFindFilters] = useState<Array<string>>([]);
+	const [projects, setProjects] = useState<Array<ProjectType>>([]);
+	const [paginatedProjects, setPaginatedProjects] = useState<Array<ProjectType[]>>([]);
 
-            </div>
-        </div>
-    )
+	function filterProjects(index: number, filter: string) {
+		setPage(1);
+        setActiveFilters((prev) =>
+            prev.includes(index)
+                ? prev.filter((f) => f !== index)
+                : [...prev, index]
+        );
+
+		setFindFilters((prev) =>
+			prev.includes(filter)
+				? prev.filter((f) => f !== filter)
+				: [...prev, filter]
+		);
+	}
+
+	function paginateProjects(projectsList: Array<ProjectType>) {
+		const paginatedProjects = Array.from(
+			{ length: Math.ceil(projectsList.length / itemsPerPage) },
+			(_, index) =>
+				projectsList.slice(index * itemsPerPage, index * itemsPerPage + itemsPerPage)
+		);
+        setPaginatedProjects(paginatedProjects);
+		return paginatedProjects;
+	}
+
+	const uniqueFilters = useMemo(() => {
+		const findedFilters = new Set<string>();
+		ALL_PROJECTS.forEach((project) => {
+			project.tags.forEach((filter) => findedFilters.add(filter));
+		});
+		return [...findedFilters];
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [ALL_PROJECTS]);
+
+    function clearFilters() {
+        setFindFilters([])
+		setActiveFilters([])
+        setPaginatedProjects(paginateProjects(ALL_PROJECTS))
+        setProjects(paginateProjects(ALL_PROJECTS)[0])
+        setPage(1)
+    }
+
+	useEffect(() => {
+		setFilters(uniqueFilters);
+	}, [uniqueFilters]);
+
+	useEffect(() => {
+		if (findFilters.length === 0) {
+			setProjects(paginateProjects(ALL_PROJECTS)[page - 1]);
+		} else {
+			const filteredProjects: Array<ProjectType> = ALL_PROJECTS.filter(
+				(project) =>
+					findFilters.every((filter) => project.tags.includes(filter))
+			);
+			setProjects(filteredProjects.length === 0 ? [] : paginateProjects(filteredProjects)[page - 1]);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [findFilters, ALL_PROJECTS]);
+
+	useEffect(() => {
+		if (activeFilters.length === 0) {
+			setProjects(paginateProjects(ALL_PROJECTS)[page - 1]);
+		}
+	}, [page]);
+
+	return (
+		<div className="flex flex-col items-center h-screen w-full">
+			<div className="flex flex-row justify-between gap-5 w-full">
+				<h1 className="text-5xl font-bold leading-tight">
+					Echale un ojo a mis <b className="text-gradient-blue">Proyectos</b>
+				</h1>
+				<button onClick={() => clearFilters()} className="bg-[#0085ff] hover:bg-[#0084ffbd] text-white font-bold px-5 rounded-full transition-colors">
+					Ver todos
+				</button>
+			</div>
+			<div className="flex flex-wrap gap-5 w-full mt-10">
+				{projects.map((project, index) => {
+					return (
+						<Project
+							key={index}
+							tittle={project.title}
+							description={project.description}
+							image={project.image}
+							link={project.link}
+							github={project.github}
+						/>
+					);
+				})}
+				{Array.from({ length: itemsPerPage - projects.length }).map(
+					(_, index) => (
+						<SkeletonProject key={index} />
+					)
+				)}
+				<div className="flex items-center justify-center gap-2 w-full mt-2 transition-all">
+					{[...Array(paginatedProjects.length)].map((_, index) => {
+						if (index === 0) {
+							return (
+								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : "bg-[#dedede] size-3 rounded-full cursor-pointer"}
+								></div>
+							);
+						} else {
+							return (
+								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : "bg-[#dedede] size-3 rounded-full cursor-pointer"}></div>
+							);
+						}
+					})}
+				</div>
+			</div>
+			<div className="flex flex-wrap gap-3 mt-5">
+				{[...filters].map((filter, index) => {
+					return (
+						<button 
+                        key={index} 
+                        onClick={() => filterProjects(index, filter)} 
+                        className={
+                            activeFilters.includes(index) 
+                            ? "border bg-[#0386ff] text-white transition-colors py-2 px-5 rounded-full"
+                            : "border bg-[#f2f4f7] hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full"
+                        }>
+							{filter}
+						</button>
+					);
+				})}
+			</div>
+		</div>
+	);
 }

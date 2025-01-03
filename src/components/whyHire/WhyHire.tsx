@@ -21,6 +21,7 @@ export default function WhyHire() {
                         <span className="font-medium opacity-50">Tasa de Éxito/Calidad</span>
                     </div>
                 </div>
+                <button></button>
             </div>
         </div>
     )
