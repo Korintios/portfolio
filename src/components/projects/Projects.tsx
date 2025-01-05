@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { default as ALL_PROJECTS, ProjectType,} from "../../constants/PROJECTS";
 import Project from "./Project";
 import SkeletonProject from "./SkeletonProject";
+import Skills from "./Skills";
 
 export default function Projects() {
 	const [page, setPage] = useState<number>(1);
@@ -75,10 +76,11 @@ export default function Projects() {
 		if (activeFilters.length === 0) {
 			setProjects(paginateProjects(ALL_PROJECTS)[page - 1]);
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [page]);
 
 	return (
-		<div className="flex flex-col items-center h-screen w-full">
+		<section className="flex flex-col items-center h-auto w-full">
 			<div className="flex flex-row justify-between gap-5 w-full">
 				<h1 className="text-5xl font-bold leading-tight">
 					Echale un ojo a mis <b className="text-gradient-blue">Proyectos</b>
@@ -136,6 +138,7 @@ export default function Projects() {
 					);
 				})}
 			</div>
-		</div>
+			<Skills/>
+		</section>
 	);
 }

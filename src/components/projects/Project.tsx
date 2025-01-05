@@ -4,7 +4,7 @@ import "./Project.style.css";
 export interface ProjectProps {
 	tittle: string;
 	description: string;
-	image: string;
+	image: string | undefined;
 	link?: string;
 	github: string;
 }

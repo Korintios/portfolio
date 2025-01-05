@@ -1,6 +1,6 @@
 export default function WhyHire() {
     return (
-        <div className="flex justify-between items-center h-screen">
+        <section className="flex justify-between items-center h-screen">
             <div>
 
             </div>
@@ -23,6 +23,6 @@ export default function WhyHire() {
                 </div>
                 <button></button>
             </div>
-        </div>
+        </section>
     )
 }

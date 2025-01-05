@@ -1,7 +1,18 @@
 import University from "../assets/icons/University";
 import Work from "../assets/icons/Work";
 
-const TIMES = [
+interface Time {
+    date: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    className: string;
+    contentStyle: { color: string; borderTop: string };
+    iconStyle: { backgroundColor: string; color: string };
+    icon: () => JSX.Element;
+}
+
+const TIMES: Array<Time> = [
     {
         date: "Febrero de 2021 — Noviembre de 2023",
         title: "FUNDACION UNIVERSITARIA TECNOLOGICO COMFENALCO",

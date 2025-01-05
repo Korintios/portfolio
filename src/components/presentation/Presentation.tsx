@@ -7,7 +7,7 @@ import Places from "../../assets/icons/Places";
 
 export default function Presentation() {
     return (
-        <div className="flex justify-between items-center">
+        <section className="flex justify-between items-center">
             <div className="flex flex-col justify-between items-center h-screen py-24">
                 <div className="flex flex-col gap-2">
                     <p className="text-xl italic">Mucho gusto!</p>
@@ -73,6 +73,6 @@ export default function Presentation() {
                 </div>
             </div>
             
-        </div>
+        </section>
     )
 }

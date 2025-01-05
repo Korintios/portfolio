@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
+section {
     @apply px-40;
     font-family: "IBM Plex Sans";
 }

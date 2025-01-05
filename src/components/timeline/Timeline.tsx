@@ -4,7 +4,7 @@ import TIMES from '../../constants/TIMES';
 
 export default function Timeline() {
     return (
-        <div className="min-h-screen">
+        <section className="min-h-screen">
             <div className="flex flex-col gap-5">
                 <h1 className="text-6xl font-bold">Mi <b className="text-gradient-blue">Linea de Tiempo</b></h1>
                 <VerticalTimeline lineColor="#f3f3f3">
@@ -24,6 +24,6 @@ export default function Timeline() {
                     ))}
                 </VerticalTimeline>
             </div>
-        </div>
+        </section>
     )
 }
