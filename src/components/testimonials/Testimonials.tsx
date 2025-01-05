@@ -18,26 +18,26 @@ export default function Testimonials() {
                 </div>
                 <div className="flex flex-row items-center justify-center gap-6">
                     {TESTIMONIALS.map((testimonial, index) => (
-                        <div className="flex flex-col gap-3 w-[785px] bg-white bg-opacity-15 p-3 rounded-md text-white">
-                        <div className="flex flex-row items-center gap-3">
-                            <img src="images/me.jpeg" alt="" className="bg-blue-500 rounded-full size-12 object-cover"/>
-                            <div className="flex flex-col items-start">
-                                <span className="text-lg font-semibold h-[21px]">{testimonial.name}</span>
-                                <span className="text-md">{testimonial.title}</span>
+                        <div key={index} className="flex flex-col gap-3 w-[785px] bg-white bg-opacity-15 p-3 rounded-md text-white">
+                            <div className="flex flex-row items-center gap-3">
+                                <img src="images/me.jpeg" alt="" className="bg-blue-500 rounded-full size-12 object-cover"/>
+                                <div className="flex flex-col items-start">
+                                    <span className="text-lg font-semibold h-[21px]">{testimonial.name}</span>
+                                    <span className="text-md">{testimonial.title}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex flex-row items-center gap-3">
-                            <div className="flex flex-row gap-2">
-                                <Star/>
-                                <Star/>
-                                <Star/>
-                                <Star/>
-                                <Star/>
+                            <div className="flex flex-row items-center gap-3">
+                                <div className="flex flex-row gap-2">
+                                    <Star/>
+                                    <Star/>
+                                    <Star/>
+                                    <Star/>
+                                    <Star/>
+                                </div>
+                                <span className="text-2xl font-bold">{testimonial.score.toFixed(1)}</span>
                             </div>
-                            <span className="text-2xl font-bold">{testimonial.score.toFixed(1)}</span>
+                            <p className="text-start font-normal leading-relaxed whitespace-normal">{testimonial.review}</p>
                         </div>
-                        <p className="text-start font-normal leading-relaxed whitespace-normal">{testimonial.review}</p>
-                    </div>
                     ))}
                     
                 </div>
