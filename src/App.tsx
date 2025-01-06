@@ -5,6 +5,7 @@ import WhyHire from "./components/whyHire/WhyHire";
 import Projects from "./components/projects/Projects";
 import Testimonials from "./components/testimonials/Testimonials";
 import FormEmail from "./components/formEmail/FormEmail";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Projects/>
         <Testimonials/>
         <FormEmail/>
+        <Footer/>
       </main>
   )
 }

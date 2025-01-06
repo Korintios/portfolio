@@ -1,9 +1,8 @@
 export default function Footer () {
     return (
-        <section className="flex flex-col items-center justify-center h-[50vh] gap-6">
-            <div className="flex flex-col items-center justify-center gap-5">
-                <h1 className="text-6xl font-bold text-center w-[900px]">¿Tienes una idea de proyecto increíble? <b className="text-gradient-blue">Discutamos</b></h1>
-            </div>
-        </section>
+        <div className="flex flex-row justify-between gap-6 bg-[#272727] px-5 py-6 text-white rounded-t-lg">
+            <p>Copyright© 2025 Juan Camilo V.M. All Rights Reserved.</p>
+            <p>User Terms & Conditions | Privacy Policy</p>
+        </div>
     )
 }
