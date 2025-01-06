@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 section {
-    @apply px-40;
+    @apply px-40 !important;
     font-family: "IBM Plex Sans";
+}
+
+@media (max-width: 1280px) {
+    section {
+        @apply px-32 !important;
+    }
+}
+
+@media (max-width: 821px) {
+    section {
+        @apply px-8 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        @apply px-4 !important;
+    }
 }
 
 .text-gradient-blue {

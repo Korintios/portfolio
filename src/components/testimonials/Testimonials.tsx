@@ -26,11 +26,11 @@ export default function Testimonials() {
 
 			<div className="testimonials flex flex-col gap-7">
 				<div className="flex flex-col items-center gap-3">
-					<h1 className="text-7xl font-bold w-[700px]">
+					<h1 className="xsm:text-4xl xl:text-7xl font-bold xsm:w-[300px] xl:w-[700px]">
 						Testimonios sobre{" "}
 						<b className="text-gradient-blue">Mis Resultados</b>
 					</h1>
-					<p className="text-2xl font-normal w-[1300px] leading-relaxed whitespace-normal">
+					<p className="text-md font-normal xsm:w-[300px] xl:w-[1300px] leading-relaxed whitespace-normal">
 						Mis testimonios no son solo palabras; son el reflejo genuino de la
 						pasión, calidad y dedicación que pongo en cada proyecto. Cada
 						opinión compartida por mis clientes es una prueba del compromiso y
@@ -51,7 +51,7 @@ export default function Testimonials() {
 						<div
 							key={index}
 							className={
-								"flex flex-col gap-3 w-[785px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
+								"flex flex-col gap-3 xl:w-[785px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
 								(index === 0 ? "one" : "")
 							}
 						>

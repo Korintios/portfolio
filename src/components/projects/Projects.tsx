@@ -80,16 +80,16 @@ export default function Projects() {
 	}, [page]);
 
 	return (
-		<section className="flex flex-col items-center h-auto w-full">
-			<div className="flex flex-row justify-between gap-5 w-full">
-				<h1 className="text-5xl font-bold leading-tight">
+		<section className="flex flex-col items-center h-auto xl:w-full">
+			<div className="flex flex-row xsm:justify-center md:justify-between gap-5 xl:w-full">
+				<h1 className="xsm:text-2xl md:text-4xl xl:text-5xl font-bold leading-tight">
 					Echale un ojo a mis <b className="text-gradient-blue">Proyectos</b>
 				</h1>
-				<button onClick={() => clearFilters()} className="bg-[#0085ff] hover:bg-[#0084ffbd] text-white font-bold px-5 rounded-full transition-colors">
+				<button onClick={() => clearFilters()} className="bg-[#0085ff] hover:bg-[#0084ffbd] text-white font-bold xsm:w-[200px] xl:w-auto xl:px-5 rounded-full transition-colors">
 					Ver todos
 				</button>
 			</div>
-			<div className="flex flex-wrap gap-5 w-full mt-10">
+			<div className="flex flex-wrap xsm:items-center xsm:justify-center gap-5 w-full mt-10">
 				{projects.map((project, index) => {
 					return (
 						<Project
@@ -122,7 +122,7 @@ export default function Projects() {
 					})}
 				</div>
 			</div>
-			<div className="flex flex-wrap gap-3 mt-5">
+			<div className="flex flex-wrap xsm:justify-center gap-3 mt-5">
 				{[...filters].map((filter, index) => {
 					return (
 						<button 

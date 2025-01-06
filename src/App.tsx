@@ -9,13 +9,13 @@ import Footer from "./components/footer/Footer";
 
 function App() {
   return (
-      <main className="h-screen">
+      <main className="h-screen overflow-x-hidden">
         <Presentation/>
         <AboutMe/>
         <Timeline/>
         <WhyHire/>
         <Projects/>
-        <Testimonials/>
+        <Testimonials/> 
         <FormEmail/>
         <Footer/>
       </main>
