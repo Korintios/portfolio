@@ -131,7 +131,7 @@ export default function Projects() {
                         className={
                             activeFilters.includes(index) 
                             ? "border bg-[#0386ff] text-white transition-colors py-2 px-5 rounded-full"
-                            : "border bg-[#f2f4f7] hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full"
+                            : "border bg-[#f2f4f7] hover:bg-[#0386ff] hover:text-white hover:scale-110 transition-all py-2 px-5 rounded-full"
                         }>
 							{filter}
 						</button>

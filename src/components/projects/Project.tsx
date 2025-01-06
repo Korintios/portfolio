@@ -17,7 +17,7 @@ export default function Project({
 	github = "",
 }: ProjectProps) {
 	return (
-		<div className="flex flex-row bg-[#f2f4f7] w-[758px] h-[335px] pl-8 rounded-s-lg portfolio-project">
+		<div className="flex flex-row bg-[#f2f4f7] w-[758px] h-[335px] pl-8 rounded-lg portfolio-project">
 			<div className="flex flex-col justify-center h-full gap-5">
                 <h1 className="text-3xl font-semibold">{tittle}</h1>
                 <p className="pr-5">{description}</p>
