@@ -4,6 +4,7 @@ import Timeline from "./components/timeline/Timeline";
 import WhyHire from "./components/whyHire/WhyHire";
 import Projects from "./components/projects/Projects";
 import Testimonials from "./components/testimonials/Testimonials";
+import FormEmail from "./components/formEmail/FormEmail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <WhyHire/>
         <Projects/>
         <Testimonials/>
+        <FormEmail/>
       </main>
   )
 }

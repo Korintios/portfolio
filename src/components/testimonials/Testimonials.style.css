@@ -33,3 +33,20 @@
 	font-family: Arial, sans-serif;
 	padding: 20px;
 }
+
+.testimonials-animation {
+	animation: testimonials-reviews 30s linear infinite;
+}
+
+@keyframes testimonials-reviews {
+	0% {
+		transform: translateX(calc(31vh));
+	}
+	50% {
+		transform: translateX(calc(-31vh));
+	}
+	100% {
+		transform: translateX(calc(31vh));
+	}
+}
+
