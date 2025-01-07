@@ -35,6 +35,7 @@
 }
 
 .testimonials-animation {
+	flex-direction: row !important;
 	animation: testimonials-reviews 30s linear infinite;
 }
 

@@ -10,14 +10,14 @@ import WhyHire from "./whyHire/WhyHire";
 export default function Light() {
     return (
         <div className="bg-white relative">
-            <Presentation/>
-            <AboutMe/>
-            <Timeline/>
-            <WhyHire/>
-            <Projects/>
+            <Presentation darkMode={false}/>
+            <AboutMe darkMode={false}/>
+            <Timeline darkMode={false}/>
+            <WhyHire darkMode={false}/>
+            <Projects darkMode={false}/>
             <Testimonials/> 
-            <FormEmail/>
-            <Footer/>
+            <FormEmail darkMode={false}/>
+            <Footer darkMode={false}/>
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { ComponentProps } from "../../types";
 export default function Presentation({darkMode = true}: ComponentProps) {
 
 	return (
-		<section className={getClass(darkMode, "background") + " " + "flex xsm:flex-col md:flex-row justify-between items-center"}>
+		<section className={getClass(darkMode, "background") + " " + "flex xsm:flex-col xl:flex-row justify-between items-center"}>
 			<motion.div className="flex flex-col justify-between items-center h-screen py-24" initial={{opacity: 0, x: -50}} animate={{ opacity: 1, x: 0}} transition={{duration: 1}}>
 				<div className={getClass(darkMode, "text") +"flex flex-col gap-2 xsm:w-[300px] xl:w-[445px]"}>
 					<p className="text-xl italic">Mucho gusto!</p>
@@ -47,10 +47,12 @@ export default function Presentation({darkMode = true}: ComponentProps) {
 						<b>Full Stack Developer</b> in <b>Colombia</b>
 					</span>
 					<a
-						href="localhost:5173"
+						href="docs/cv.pdf"
+						download={true}
+						target="_blank"
 						className="xl:text-md underline flex flex-row gap-2 items-center justify-center"
 					>
-						Descargar CV <NorthEastIcon />
+						Descargar CV <NorthEastIcon darkMode={darkMode}/>
 					</a>
 				</div>
 			</motion.div>

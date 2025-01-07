@@ -107,7 +107,7 @@ export default function Projects({darkMode = true}: ComponentProps) {
 				})}
 				{Array.from({ length: itemsPerPage - projects.length }).map(
 					(_, index) => (
-						<SkeletonProject key={index} />
+						<SkeletonProject darkMode={darkMode} key={index} />
 					)
 				)}
 				<div className="flex items-center justify-center gap-2 w-full mt-2 transition-all">
@@ -141,7 +141,7 @@ export default function Projects({darkMode = true}: ComponentProps) {
 					);
 				})}
 			</div>
-			<Skills/>
+			<Skills darkMode={darkMode}/>
 		</section>
 	);
 }

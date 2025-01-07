@@ -16,9 +16,15 @@ section {
     @apply bg-clip-text;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1480px) {
+  section {
+      @apply px-32 !important;
+  }
+}
+
+@media (min-width: 1280px) {
     section {
-        @apply px-32 !important;
+        @apply px-24 !important;
     }
 }
 

@@ -17,7 +17,7 @@ export default function Testimonials() {
 	});
 
 	return (
-		<div className="testimonials-container w-full h-screen flex items-center justify-center">
+		<div className="testimonials-container w-full sm:h-screen flex items-center justify-center">
 			<video autoPlay muted loop src="videos/one.mp4" typeof="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -30,7 +30,7 @@ export default function Testimonials() {
 						Testimonios sobre{" "}
 						<b className="text-gradient-blue">Mis Resultados</b>
 					</h1>
-					<p className="text-md font-normal xsm:w-[300px] xl:w-[1300px] leading-relaxed whitespace-normal">
+					<p className="xsm:text-md 2xl:text-xl font-normal w-auto leading-relaxed whitespace-normal">
 						Mis testimonios no son solo palabras; son el reflejo genuino de la
 						pasión, calidad y dedicación que pongo en cada proyecto. Cada
 						opinión compartida por mis clientes es una prueba del compromiso y
@@ -43,7 +43,7 @@ export default function Testimonials() {
 				</div>
 				<div
 					className={
-						"testimonials-reviews flex flex-row items-start justify-center gap-6" +
+						"testimonials-reviews flex xsm:flex-col 2xl:flex-row items-center justify-center gap-6" +
 						(TESTIMONIALS.length >= 3 ? " testimonials-animation" : "")
 					}
 				>
@@ -51,18 +51,18 @@ export default function Testimonials() {
 						<div
 							key={index}
 							className={
-								"flex flex-col gap-3 xl:w-[785px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
+								"flex flex-col gap-3 xl:w-[785px] xl:h-[230px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
 								(index === 0 ? "one" : "")
 							}
 						>
 							<div className="flex flex-row items-center gap-3">
 								<img
-									src="images/me.jpeg"
+									src={testimonial.image}
 									alt=""
 									className="bg-blue-500 rounded-full size-12 object-cover"
 								/>
 								<div className="flex flex-col items-start">
-									<span className="text-lg font-semibold h-[21px]">
+									<span className="text-lg font-semibold h-[21px] truncate">
 										{testimonial.name}
 									</span>
 									<span className="text-md">{testimonial.title}</span>
