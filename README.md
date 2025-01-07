@@ -1,7 +1,3 @@
-Aquí tienes la versión actualizada de tu README.md con los espacios adicionales solicitados:
-
----
-
 # Portafolio de Juan Camilo Vergara Marín
 
 ¡Hola! Soy **Juan Camilo Vergara Marín**, un desarrollador full-stack apasionado por la tecnología, con experiencia en desarrollo web y móvil. Actualmente, estoy enfocado en construir soluciones tecnológicas que combinen calidad, funcionalidad y diseño intuitivo.
@@ -53,9 +49,3 @@ Aquí tienes la versión actualizada de tu README.md con los espacios adicionale
 ## 🔧 Futuras Actualizaciones del Portafolio
 1. Incorporar un sistema de lenguajes para que personas de tood el mundo puedan acceder.
 2. Mejorar la experiencia y envio de correo electronico.
-
----
-
-Este archivo README.md es el primer paso para destacar tus logros y habilidades en el mundo del desarrollo. ¡Puedes seguir actualizándolo a medida que avances en tu carrera!
-
-¿Quieres que agreguemos enlaces reales, ejemplos de proyectos o algo más? 😊
