@@ -1,4 +1,25 @@
-export const THEME = {
+interface ThemeProperties {
+    background: string;
+    backgroundSocials: string;
+    text: string;
+    filter: string;
+    filterOnHover: string;
+    border: string;
+    skeletonBackground: string;
+    skeletonBackgroundSecondary: string;
+    formBorder: string;
+}
+
+interface Theme {
+    light: ThemeProperties;
+    dark: ThemeProperties & {
+        fill: string;
+        shadowColor: string;
+        textSecondary: string;
+    };
+}
+
+export const THEME: Theme = {
     light: {
         background: 'bg-white',
         backgroundSocials: 'bg-[#F3F3F3]',
@@ -27,5 +48,6 @@ export const THEME = {
 }
 
 export function getClass(dark: boolean, property: string) {
-    return THEME[dark ? 'dark' : 'light'][property] + " ";
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return (THEME[dark ? 'dark' : 'light'] as any)[property] + " ";
 }

@@ -17,7 +17,7 @@ export default function Project({
 	image = "",
 	link = "",
 	github = "",
-	darkMode
+	darkMode = true
 }: ProjectProps) {
 	return (
 		<div className={getClass(darkMode, "backgroundSocials") + "flex xsm:flex-col xl:flex-row xsm:h-[608px] xsm:w-[358px] md:w-[360px] xl:w-[608px] 2xl:w-[758px] xl:h-[335px] xsm:pl-0 xl:pl-8 rounded-lg portfolio-project"}>
