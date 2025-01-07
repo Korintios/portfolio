@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+Aquí tienes la versión actualizada de tu README.md con los espacios adicionales solicitados:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Portafolio de Juan Camilo Vergara Marín
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+¡Hola! Soy **Juan Camilo Vergara Marín**, un desarrollador full-stack apasionado por la tecnología, con experiencia en desarrollo web y móvil. Actualmente, estoy enfocado en construir soluciones tecnológicas que combinen calidad, funcionalidad y diseño intuitivo.
 
-## Expanding the ESLint configuration
+## 📌 Acerca de mí
+- 🎓 **Educación**:
+  - Tecnólogo en Sistemas (2021 - 2023) - Fundación Universitaria Tecnológico Comfenalco.
+  - Actualmente cursando Ingeniería de Sistemas - Fundación Universitaria Tecnológico Comfenalco.
+- 💼 **Objetivo Profesional**: 
+  Busco crecer profesionalmente en roles que permitan aplicar mis habilidades técnicas en programación, resolución de problemas y diseño de interfaces, mientras sigo aprendiendo y superándome día a día.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Habilidades Técnicas
+- **Frontend**: HTML5, CSS3, JavaScript, TypeScript, React.
+- **Desarrollo Móvil**: React Native, Expo.
+- **Backend**: PHP (CodeIgniter), Node.js.
+- **Bases de Datos**: MySQL, SQLite.
+- **Herramientas**: Git, GitHub, AJAX, jQuery.
 
-- Configure the top-level `parserOptions` property like this:
+## 💼 Experiencia Profesional
+1. **Desarrollador Móvil** - Lumxis (Sep 2024 - Actualidad)
+   - Desarrollo de aplicaciones móviles utilizando React Native y Expo.
+   - Implementación de soluciones escalables y optimizadas en la nube.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Prestador de Servicios** - Seisk Agencia de Publicidad (Jul 2024 - Oct 2024)
+   - Desarrollo e implementación de módulos web con herramientas como PHP, CodeIgniter y jQuery.
+   - Documentación técnica y soporte de proyectos.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Programador de Mantenimiento** - REDTIC (Ene 2024 - Mar 2024)
+   - Gestión de servidores y soporte técnico en proyectos asignados.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+4. **Prestador de Servicios** - REDTIC & Unión Temporal Pro-Fortalecimiento CTEL (Ago 2022 - Oct 2023)
+   - Desarrollo y mantenimiento de sistemas web.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 📜 Certificados y Cursos
+- Curso de **HTML5 desde cero** (Udemy).
+- **Universidad JavaScript**: De Cero a Experto.
+- **Universidad Angular**: De Cero a Experto.
+- **Master en React**: ReactJS, Hooks, MERN, NodeJS, JWT+.
+
+## 🌐 Enlaces
+- [LinkedIn](https://www.linkedin.com/in/juan-camilo-vergara-marin-a50805263/)
+---
+
+## 📱 Vista Previa del Portafolio
+- **Web**: [Enlace a tu portafolio web](#) *(Actualiza con la URL de tu portafolio web).*
+
+---
+
+## 🔧 Futuras Actualizaciones del Portafolio
+1. Incorporar un sistema de lenguajes para que personas de tood el mundo puedan acceder.
+2. Mejorar la experiencia y envio de correo electronico.
+
+---
+
+Este archivo README.md es el primer paso para destacar tus logros y habilidades en el mundo del desarrollo. ¡Puedes seguir actualizándolo a medida que avances en tu carrera!
+
+¿Quieres que agreguemos enlaces reales, ejemplos de proyectos o algo más? 😊
