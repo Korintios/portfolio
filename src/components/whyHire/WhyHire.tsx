@@ -18,8 +18,8 @@ export default function WhyHire({darkMode = true}: ComponentProps) {
                             <span className="font-medium opacity-50">Proyectos completados</span>
                         </div>
                         <div className="flex flex-col gap-3">
-                            <h1 className="xsm:text-4xl xl:text-5xl font-bold text-gradient-blue">15%</h1>
-                            <span className="font-medium opacity-50">Tiempo promedio de entrega</span>
+                            <h1 className="xsm:text-4xl xl:text-5xl font-bold text-gradient-blue">30%</h1>
+                            <span className="font-medium opacity-50 ">Más rápido en la entrega de trabajos</span>
                         </div>
                         <div className="flex flex-col gap-3">
                             <h1 className="xsm:text-4xl xl:text-5xl font-bold text-gradient-blue">90%</h1>
