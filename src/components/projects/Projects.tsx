@@ -3,8 +3,10 @@ import { default as ALL_PROJECTS, ProjectType,} from "../../constants/PROJECTS";
 import Project from "./Project";
 import SkeletonProject from "./SkeletonProject";
 import Skills from "./Skills";
+import { ComponentProps } from "../../types";
+import { getClass } from "../../constants/THEME";
 
-export default function Projects() {
+export default function Projects({darkMode = true}: ComponentProps) {
 	const [page, setPage] = useState<number>(1);
 	const itemsPerPage = 4;
 	const [filters, setFilters] = useState<Array<string>>([]);
@@ -80,7 +82,7 @@ export default function Projects() {
 	}, [page]);
 
 	return (
-		<section className="flex flex-col items-center h-auto xl:w-full">
+		<section className={getClass(darkMode,"background") + getClass(darkMode,"text") + "flex flex-col items-center h-auto xl:w-full"}>
 			<div className="flex flex-row xsm:justify-center md:justify-between gap-5 xl:w-full">
 				<h1 className="xsm:text-2xl md:text-4xl xl:text-5xl font-bold leading-tight">
 					Echale un ojo a mis <b className="text-gradient-blue">Proyectos</b>
@@ -99,6 +101,7 @@ export default function Projects() {
 							image={project.image}
 							link={project.link}
 							github={project.github}
+							darkMode={darkMode}
 						/>
 					);
 				})}
@@ -111,12 +114,12 @@ export default function Projects() {
 					{[...Array(paginatedProjects.length)].map((_, index) => {
 						if (index === 0) {
 							return (
-								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : "bg-[#dedede] size-3 rounded-full cursor-pointer"}
+								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : (darkMode ? " bg-[#292929] " : " bg-[#dedede] ") + " size-3 rounded-full cursor-pointer"}
 								></div>
 							);
 						} else {
 							return (
-								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : "bg-[#dedede] size-3 rounded-full cursor-pointer"}></div>
+								<div key={index} onClick={() => setPage(index + 1)} className={page === index + 1 ? "transition-all bg-[#0085ff] w-10 h-3 rounded-full cursor-pointer" : (darkMode ? " bg-[#292929] " : " bg-[#dedede] ") + " size-3 rounded-full cursor-pointer"}></div>
 							);
 						}
 					})}
@@ -129,9 +132,9 @@ export default function Projects() {
                         key={index} 
                         onClick={() => filterProjects(index, filter)} 
                         className={
-                            activeFilters.includes(index) 
-                            ? "border bg-[#0386ff] text-white transition-colors py-2 px-5 rounded-full"
-                            : "border bg-[#f2f4f7] hover:bg-[#0386ff] hover:text-white hover:scale-110 transition-all py-2 px-5 rounded-full"
+                            activeFilters.includes(index)
+							? getClass(darkMode, "filter") + "transition-colors py-2 px-5 rounded-full"
+							: getClass(darkMode, "filterOnHover") + "hover:scale-110 transition-all py-2 px-5 rounded-full"
                         }>
 							{filter}
 						</button>

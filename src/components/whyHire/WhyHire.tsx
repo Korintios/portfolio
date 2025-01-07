@@ -1,8 +1,10 @@
 import { motion } from "motion/react"
+import { getClass } from "../../constants/THEME"
+import { ComponentProps } from "../../types"
 
-export default function WhyHire() {
+export default function WhyHire({darkMode = true}: ComponentProps) {
     return (
-        <section className="h-screen">
+        <section className={getClass(darkMode, "background") + getClass(darkMode, "text") + "h-screen"}>
             <motion.div className="flex justify-between items-center h-full" initial={{ opacity: 0, x: 50 }} animate={{opacity: 1, x: 0}} transition={{ duration: 1.5 }}>
                 <div>
 
