@@ -19,7 +19,7 @@ export default function Testimonials() {
 	return (
 		<div className="testimonials-container w-full sm:h-screen flex items-center justify-center">
 			<video autoPlay muted loop src="videos/one.mp4" typeof="video/mp4">
-				Your browser does not support the video tag.
+				Este buscador no soporte esta etiqueta de video.
 			</video>
 
 			<div className="overlay"></div>

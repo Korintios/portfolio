@@ -44,7 +44,7 @@ export default function Presentation({darkMode = true}: ComponentProps) {
 						/>
 					</h1>
 					<span className="xsm:text-1xl xl:text-xl">
-						<b>Full Stack Developer</b> in <b>Colombia</b>
+						<b>Desarrollador Full Stack</b> en <b>Colombia</b>
 					</span>
 					<a
 						href="docs/cv.pdf"

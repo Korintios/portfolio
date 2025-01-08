@@ -31,7 +31,7 @@ export default function Timeline({darkMode = true}: ComponentProps) {
 							iconStyle={time.iconStyle}
 							contentStyle={{ backgroundColor: darkMode ? "#292929" : '', ...time.contentStyle }}
 							icon={<time.icon />}
-							className={time.className}
+							className="vertical-timeline-element--work"
 							contentArrowStyle={{ borderRight: darkMode ? '7px solid #292929' : '' }}
 							textClassName="text-white"
 						>
