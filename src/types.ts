@@ -31,9 +31,14 @@ export interface PresentationLang {
 }
 
 export interface AboutLang {
-    title: string;
-    description: string;
-    boldWords: string[];
+    title: {
+        text: string,
+        boldWords: string[]
+    }
+    description: {
+        text: string,
+        boldWords: string[]
+    }
 }
 
 export interface TimelineLang {

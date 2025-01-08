@@ -6,9 +6,9 @@ export default function AboutMe({darkMode = true, lang}: {darkMode: boolean, lan
     return (
         <section className={getClass(darkMode, 'background') + getClass(darkMode, 'text') + "flex xsm:flex-col xsm:justify-center xl:justify-between xsm:gap-10 xl:gap-0 xl:flex-row items-center h-screen"}>
             <div className="flex flex-col gap-5">
-                <h1 className="xsm:text-5xl xl:text-6xl font-bold"><HighlightText text={lang.title} boldWords={["Sobre Mí"]} withClass/></h1>
+                <h1 className="xsm:text-5xl xl:text-6xl font-bold"><HighlightText text={lang.title.text} boldWords={lang.title.boldWords} withClass/></h1>
                 <p className="xsm:w-full xl:w-[500px] text-xl font-light leading-relaxed whitespace-normal">
-                    <HighlightText text={lang.description} boldWords={lang.boldWords} withClass/>
+                    <HighlightText text={lang.description.text} boldWords={lang.description.boldWords} withClass/>
                 </p>
 
             </div>

@@ -49,9 +49,14 @@ const ES: Lang = {
         ]
     },
     "aboutMe": {
-        "title": "Un poco Sobre Mí",
-        "description": "Desde pequeño, siempre me sentí atraído por los computadores y la tecnología, lo que marcó el inicio de mi camino en el desarrollo. Comencé aprendiendo HTML, CSS y PHP por recomendación externa de un profesional del tema que, a palabras de él, vio potencial en mí. Al ingresar a la universidad, descubrí mi pasión por este mundo. Ahí, aprendí Python y profundicé en Java, mientras que React y PHP se convirtieron en mis tecnologías principales. Cada proyecto que realizo refleja mi esfuerzo por mejorar y crear soluciones de calidad. Actualmente, me enfoco en perfeccionar mis habilidades y explorar UI/UX para complementar mi desarrollo profesional. Amo lo que hago y busco superarme cada día.",
-        "boldWords": ["computadores","tecnología","HTML","CSS","PHP","vio potencial en mi","universidad","Java","React","calidad","UI/UX","Amo lo que hago","superarme cada día"],
+        "title": {
+            "text": "Un poco Sobre Mí",
+            "boldWords": ["Sobre Mí"],
+        },
+        "description": {
+            "text": "Desde pequeño, siempre me sentí atraído por los computadores y la tecnología, lo que marcó el inicio de mi camino en el desarrollo. Comencé aprendiendo HTML, CSS y PHP por recomendación externa de un profesional del tema que, a palabras de él, vio potencial en mí. Al ingresar a la universidad, descubrí mi pasión por este mundo. Ahí, aprendí Python y profundicé en Java, mientras que React y PHP se convirtieron en mis tecnologías principales. Cada proyecto que realizo refleja mi esfuerzo por mejorar y crear soluciones de calidad. Actualmente, me enfoco en perfeccionar mis habilidades y explorar UI/UX para complementar mi desarrollo profesional. Amo lo que hago y busco superarme cada día.",
+            "boldWords": ["computadores","tecnología","HTML","CSS","PHP","vio potencial en mi","universidad","Java","React","calidad","UI/UX","Amo lo que hago","superarme cada día"],
+        }
     },
     "timeline": {
         "title": "Mi Línea de Tiempo",

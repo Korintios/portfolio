@@ -49,9 +49,14 @@ const EN: Lang = {
         ]
     },
     "aboutMe": {
-        "title": "A Little About Me",
-        "description": "Since childhood, I have always been drawn to computers and technology, which marked the beginning of my journey in development. I started learning HTML, CSS, and PHP at the suggestion of a professional who, in his words, saw potential in me. Upon entering university, I discovered my passion for this world. There, I learned Python and delved into Java, while React and PHP became my main technologies. Every project I undertake reflects my effort to improve and create quality solutions. I am currently focused on perfecting my skills and exploring UI/UX to complement my professional development. I love what I do and strive to improve every day.",
-        "boldWords": ["computers", "technology", "HTML", "CSS", "PHP", "saw potential in me", "university", "Java", "React", "quality", "UI/UX", "I love what I do", "strive to improve every day"],
+        "title": {
+            "text": "A little About Me",
+            "boldWords": ["About Me"],
+        },
+        "description": {
+            "text": "Since childhood, I have always been drawn to computers and technology, which marked the beginning of my journey in development. I started learning HTML, CSS, and PHP at the suggestion of a professional who, in his words, saw potential in me. Upon entering university, I discovered my passion for this world. There, I learned Python and delved into Java, while React and PHP became my main technologies. Every project I undertake reflects my effort to improve and create quality solutions. I am currently focused on perfecting my skills and exploring UI/UX to complement my professional development. I love what I do and strive to improve every day.",
+            "boldWords": ["computers", "technology", "HTML", "CSS", "PHP", "saw potential in me", "university", "Java", "React", "quality", "UI/UX", "I love what I do", "strive to improve every day"],
+        }
     },
     "timeline": {
         "title": "My Timeline",
