@@ -82,6 +82,6 @@ section {
   @media (max-width: 768px) {
     #toggle {
       font-size: 0.875rem;
-      padding: 10px 10px;
+      padding: 6px 10px;
     }
   }
