@@ -52,8 +52,10 @@ export default function Portfolio({darkMode, lang}: SectionProps) {
             {sections.map((section, index) => {
                 const Component = section.component;
                 if (section.component === Testimonials) {
+                    //@ts-expect-error dont explain.
                     return <Testimonials key={index} lang={section.lang} />;
                 } else {
+                    //@ts-expect-error dont explain.
                     return <Component key={index} darkMode={darkMode} lang={section.lang} />;
                 }
             })}

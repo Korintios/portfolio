@@ -1,7 +1,6 @@
 import { getClass } from "../../constants/THEME";
-import { ComponentProps } from "../../types";
 
-export default function SkeletonProject({darkMode = true}: ComponentProps) {
+export default function SkeletonProject({darkMode = true}: {darkMode: boolean}) {
     return (
         <div className={getClass(darkMode, "skeletonBackground") + "flex xsm:flex-col xl:flex-row justify-between xsm:h-[608px] xsm:w-[358px] xl:w-[758px] xl:h-[335px] xsm:pl-0 xl:pl-8 pl-8 rounded-lg"}>
 			<div className="flex flex-col justify-center h-full gap-5 xsm:px-8 xl:px-0">
