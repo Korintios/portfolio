@@ -1,29 +1,51 @@
 import { useState } from "react";
-import LightPortfolio from "./components/Light";
-import DarkPortfolio from "./components/Dark";
 import Light from "./assets/icons/theme/Light";
 import Dark from "./assets/icons/theme/Dark";
+import Portfolio from "./components/Portfolio";
+import spanishLang from "./locales/es";
+import englishLang from "./locales/en";
+import { Lang } from "./types";
+
 
 function App() {
-  const [theme, setTheme] = useState("dark"); // Estado inicial: modo oscuro
-  const [isAnimating, setIsAnimating] = useState(false); // Controla la animación
+  const [lang, setLang] = useState<"es" | "en">("en");
+  const [theme, setTheme] = useState("dark");
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const langList: { [key in "es" | "en"]: Lang } = {
+    es: spanishLang,
+    en: englishLang
+  }
+
+  const toggleLang = () => {
+    setLang((prev) => (prev === "es" ? "en" : "es"));
+  }
+
 
   const toggleTheme = () => {
-    setIsAnimating(true); // Activa la animación
+    setIsAnimating(true);
     setTimeout(() => {
-      setTheme((prev) => (prev === "dark" ? "light" : "dark")); // Cambia el tema
-      setIsAnimating(false); // Desactiva la animación
-    }, 600); // Duración de la animación
+      setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+      setIsAnimating(false);
+    }, 600);
   };
 
   return (
     <main className="h-screen overflow-x-hidden relative">
       {/* Contenido del tema */}
-      {theme === "dark" ? <DarkPortfolio /> : <LightPortfolio />}
+      <Portfolio lang={langList[lang]} darkMode={theme === "dark" ? true: false} />
 
       {/* Botón para alternar el tema */}
       <button
-        id="toggle-theme"
+        id="toggle"
+        onClick={toggleLang}
+        className={(theme === "dark" ? "text-stone-700" : "text-gray-300") + " top-4 left-4 p-2 rounded font-bold"}
+      >
+            {lang.toUpperCase()}
+      </button>
+
+      <button
+        id="toggle"
         onClick={toggleTheme}
         className={(theme === "dark" ? "text-stone-700" : "text-gray-300") + " top-4 right-4 p-2 rounded"}
       >

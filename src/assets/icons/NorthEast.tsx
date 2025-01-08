@@ -1,6 +1,4 @@
-import { ComponentProps } from "../../types";
-
-export default function NorthEast({darkMode = true}: ComponentProps) {
+export default function NorthEast({darkMode = true}: {darkMode: boolean}) {
 	return (
 		<svg
 			width="24"

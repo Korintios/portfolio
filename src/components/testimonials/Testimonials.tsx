@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 import Star from "../../assets/icons/Star";
-import TESTIMONIALS from "../../constants/TESTIMONIALS";
 import "./Testimonials.style.css";
+import { TestimonialsLang } from "../../types";
+import HighlightText from "../../utils/texts";
 
-export default function Testimonials() {
+export default function Testimonials({lang}: {lang: TestimonialsLang}) {
 	useEffect(() => {
 		const carousel = document.querySelector(
 			".testimonial-carousel"
 		) as HTMLElement;
-		if (carousel && TESTIMONIALS.length >= 3) {
+		if (carousel && lang.reviews.length >= 3) {
 			carousel.style.setProperty(
 				"--testimonials",
-				(TESTIMONIALS.length + 1).toString()
+				(lang.reviews.length + 1).toString()
 			);
 		}
 	});
@@ -19,35 +20,23 @@ export default function Testimonials() {
 	return (
 		<div className="testimonials-container w-full sm:h-screen flex items-center justify-center">
 			<video autoPlay muted loop src="videos/one.mp4" typeof="video/mp4">
-				Este buscador no soporte esta etiqueta de video.
+				{lang.videoError}
 			</video>
 
 			<div className="overlay"></div>
 
 			<div className="testimonials flex flex-col gap-7">
 				<div className="flex flex-col items-center gap-3">
-					<h1 className="xsm:text-4xl xl:text-7xl font-bold xsm:w-[300px] xl:w-[700px]">
-						Testimonios sobre{" "}
-						<b className="text-gradient-blue">Mis Resultados</b>
-					</h1>
-					<p className="xsm:text-md 2xl:text-xl font-normal w-auto leading-relaxed whitespace-normal">
-						Mis testimonios no son solo palabras; son el reflejo genuino de la
-						pasión, calidad y dedicación que pongo en cada proyecto. Cada
-						opinión compartida por mis clientes es una prueba del compromiso y
-						el esfuerzo que entrego para superar expectativas. Ellos confiaron
-						en mí y, con sus historias, muestran cómo mi trabajo transformó sus
-						ideas en resultados reales. Desde soluciones creativas hasta un
-						servicio personalizado, sus experiencias son mi mejor carta de
-						presentación.
-					</p>
+					<h1 className="xsm:text-4xl xl:text-7xl font-bold xsm:w-[300px] xl:w-[700px]"><HighlightText text={lang.title} boldWords={lang.boldWords} withClass/></h1>
+					<p className="xsm:text-md 2xl:text-xl font-normal w-auto leading-relaxed whitespace-normal">{lang.description}</p>
 				</div>
 				<div
 					className={
 						"testimonials-reviews flex xsm:flex-col 2xl:flex-row items-center justify-center gap-6" +
-						(TESTIMONIALS.length >= 3 ? " testimonials-animation" : "")
+						(lang.reviews.length >= 3 ? " testimonials-animation" : "")
 					}
 				>
-					{TESTIMONIALS.map((testimonial, index) => (
+					{lang.reviews.map((testimonial, index) => (
 						<div
 							key={index}
 							className={

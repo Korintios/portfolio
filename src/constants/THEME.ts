@@ -1,6 +1,7 @@
 interface ThemeProperties {
     background: string;
     backgroundSocials: string;
+    colorMark: string;
     text: string;
     filter: string;
     filterOnHover: string;
@@ -23,6 +24,7 @@ export const THEME: Theme = {
     light: {
         background: 'bg-white',
         backgroundSocials: 'bg-[#F3F3F3]',
+        colorMark: 'text-[#ccc]',
         text: 'text-[#344054]',
         filter: 'bg-[#0386ff] text-white',
         filterOnHover: 'bg-[#f2f4f7] hover:bg-[#0386ff] hover:text-white',
@@ -33,12 +35,13 @@ export const THEME: Theme = {
     },
     dark: {
         background: 'bg-[#1e1e1e]',
+        colorMark: 'text-[#444]',
         fill: 'fill-white',
         backgroundSocials: 'bg-[#292929]',
         shadowColor: 'shadow-gray-600',
         text: 'text-white',
         textSecondary: 'text-[#A0A0A0]',
-        filter: 'bg-[#292929] text-[#000] border-none',
+        filter: 'bg-[#0386ff]  border-none',
         filterOnHover: 'bg-[#292929] text-[#ccc] hover:bg-[#0386ff] hover:text-white',
         border: 'border-white',
         skeletonBackground: 'bg-[#292929]',

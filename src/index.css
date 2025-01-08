@@ -67,7 +67,7 @@ section {
   }
   
   
-  #toggle-theme {
+  #toggle {
     position: absolute; 
     top: 16px;
     right: 16px;
@@ -80,7 +80,7 @@ section {
   }
 
   @media (max-width: 768px) {
-    #toggle-theme {
+    #toggle {
       font-size: 0.875rem;
       padding: 6px 10px;
     }

@@ -1,11 +1,11 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import TIMES from "../../constants/TIMES";
-import { ComponentProps } from "../../types";
+import { TimelineLang } from "../../types";
 import { getClass } from "../../constants/THEME";
 import { useEffect } from "react";
+import HighlightText from "../../utils/texts";
 
-export default function Timeline({darkMode = true}: ComponentProps) {
+export default function Timeline({darkMode = true, lang}: {darkMode: boolean, lang: TimelineLang}) {
 
 	useEffect(() => {
 		const elements = document.getElementsByClassName("vertical-timeline-element-date");
@@ -21,15 +21,15 @@ export default function Timeline({darkMode = true}: ComponentProps) {
 		<section className={getClass(darkMode, "background") + getClass(darkMode, "text") + "h-auto max-h-none xl:w-auto"}>
 			<div className="flex flex-col gap-5">
 				<h1 className="xsm:text-3xl xsm:pl-4 xl:pl-0 xl:text-6xl font-bold">
-					Mi <b className="text-gradient-blue">Linea de Tiempo</b>
+					<HighlightText text={lang.title} boldWords={lang.boldWords} withClass />
 				</h1>
 				<VerticalTimeline lineColor={darkMode ? "#292929" : "#f3f3f3"}>
-					{TIMES.map((time, index) => (
+					{lang.events.map((time, index) => (
 						<VerticalTimelineElement
 							key={index}
 							date={time.date}
-							iconStyle={time.iconStyle}
-							contentStyle={{ backgroundColor: darkMode ? "#292929" : '', ...time.contentStyle }}
+							iconStyle={time.styles.icon}
+							contentStyle={{ backgroundColor: darkMode ? "#292929" : '', ...time.styles.content }}
 							icon={<time.icon />}
 							className="vertical-timeline-element--work"
 							contentArrowStyle={{ borderRight: darkMode ? '7px solid #292929' : '' }}

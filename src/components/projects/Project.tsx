@@ -1,5 +1,6 @@
 import GitHub from "../../assets/icons/socials/Github";
 import { getClass } from "../../constants/THEME";
+import { ProjectsLang } from "../../types";
 import "./Project.style.css";
 
 export interface ProjectProps {
@@ -9,6 +10,7 @@ export interface ProjectProps {
 	link?: string;
 	github: string;
 	darkMode?: boolean | undefined;
+	lang: ProjectsLang
 }
 
 export default function Project({
@@ -17,7 +19,8 @@ export default function Project({
 	image = "",
 	link = "",
 	github = "",
-	darkMode = true
+	darkMode = true,
+	lang
 }: ProjectProps) {
 	return (
 		<div className={getClass(darkMode, "backgroundSocials") + "flex xsm:flex-col xl:flex-row xsm:h-[608px] xsm:w-[358px] md:w-[360px] xl:w-[608px] 2xl:w-[758px] xl:h-[335px] xsm:pl-0 xl:pl-8 rounded-lg portfolio-project"}>
@@ -25,7 +28,7 @@ export default function Project({
                 <h1 className="text-3xl font-semibold">{tittle}</h1>
                 <p className="pr-5">{description}</p>
                 <div className="flex flex-row items-center gap-2">
-				{link && <a href={link} target="_blank" className={getClass(darkMode, "border") + "border hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full"}>Ver Proyecto</a>}
+				{link && <a href={link} target="_blank" className={getClass(darkMode, "border") + "border hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors py-2 px-5 rounded-full"}>{lang.viewProject}</a>}
                     <a href={github} className={getClass(darkMode, "border") + "flex items-center justify-center border hover:border-transparent hover:bg-[#0386ff] hover:text-white transition-colors rounded-full size-[42px]"}><GitHub/></a>
                 </div>
             </div>

@@ -4,14 +4,17 @@ import PhoneIcon from "../assets/icons/Phone";
 import LocationIcon from "../assets/icons/Places";
 import University from "../assets/icons/University";
 import Work from "../assets/icons/Work";
+import { Lang } from "../types";
 
-const ES = {
-    "profile": {
+const ES: Lang = {
+    "presentation": {
         "greeting": "¡Mucho gusto!",
         "nameHeader": "MI NOMBRE ES...",
         "fullName": "JUAN CAMILO V.M",
-        "jobTitle": "Desarrollador Full Stack",
-        "location": "Colombia",
+        "jobTitle": {
+            "text": "Desarrollador Full Stack en Colombia",
+            "boldWords": ["Desarrollador Full Stack", "Colombia"],
+        },
         "downloadCVText": "Descargar CV",
         "experiences": [
             {
@@ -45,12 +48,14 @@ const ES = {
             }
         ]
     },
-    "about": {
-        "title": "Sobre Mí",
-        "description": "Desde pequeño, siempre me sentí atraído por los computadores y la tecnología, lo que marcó el inicio de mi camino en el desarrollo. Comencé aprendiendo HTML, CSS y PHP por recomendación externa de un profesional del tema que, a palabras de él, vio potencial en mí. Al ingresar a la universidad, descubrí mi pasión por este mundo. Ahí, aprendí Python y profundicé en Java, mientras que React y PHP se convirtieron en mis tecnologías principales. Cada proyecto que realizo refleja mi esfuerzo por mejorar y crear soluciones de calidad. Actualmente, me enfoco en perfeccionar mis habilidades y explorar UI/UX para complementar mi desarrollo profesional. Amo lo que hago y busco superarme cada día."
+    "aboutMe": {
+        "title": "Un poco Sobre Mí",
+        "description": "Desde pequeño, siempre me sentí atraído por los computadores y la tecnología, lo que marcó el inicio de mi camino en el desarrollo. Comencé aprendiendo HTML, CSS y PHP por recomendación externa de un profesional del tema que, a palabras de él, vio potencial en mí. Al ingresar a la universidad, descubrí mi pasión por este mundo. Ahí, aprendí Python y profundicé en Java, mientras que React y PHP se convirtieron en mis tecnologías principales. Cada proyecto que realizo refleja mi esfuerzo por mejorar y crear soluciones de calidad. Actualmente, me enfoco en perfeccionar mis habilidades y explorar UI/UX para complementar mi desarrollo profesional. Amo lo que hago y busco superarme cada día.",
+        "boldWords": ["computadores","tecnología","HTML","CSS","PHP","vio potencial en mi","universidad","Java","React","calidad","UI/UX","Amo lo que hago","superarme cada día"],
     },
     "timeline": {
         "title": "Mi Línea de Tiempo",
+        "boldWords": ["Línea de Tiempo"],
         "events": [
             {
                 date: "Febrero de 2021 — Noviembre de 2023",
@@ -120,8 +125,9 @@ const ES = {
             },
         ]
     },
-    "hireMe": {
-        "title": "¿Por Qué Contratarme?",
+    "whyHireMe": {
+        "title": "¿Por que Deberias Contratarme?",
+        "boldWords": ["Deberias Contratarme?"],
         "description": "Aprendo rápido, trabajo con precisión y priorizo la calidad en cada proyecto que desarrollo. Mi capacidad de liderazgo, organización y enfoque en los detalles asegura entregas impecables y puntuales.",
         "statistics": [
             { "value": "10+", "label": "Proyectos Completados" },
@@ -130,8 +136,12 @@ const ES = {
         ]
     },
     "projects": {
-        "title": "Proyectos Destacados",
-        "viewAllText": "Ver Todos",
+        "title": {
+            "text": "Echale un ojo a mis Proyectos",
+            "boldWords": ["Proyectos"],
+        },
+        "viewAll": "Ver Todos",
+        "viewProject": "Ver Proyecto",
         "portfolio": [
             {
                 title: 'Aplicacion de Peluqueria',
@@ -179,11 +189,17 @@ const ES = {
                 github: 'https://github.com/Korintios/todo-app',
                 tags: ['HTML','CSS','JavaScript']
             }
-        ]
+        ],
+        "skills": {
+            "text": "Mis Habilidades",
+            "boldWords": ["Habilidades"],
+        }
     },
     "testimonials": {
         "title": "Testimonios sobre Mis Resultados",
+        "boldWords": ["Mis Resultados"],
         "description": "Mis testimonios no son solo palabras; son el reflejo genuino de la pasión, calidad y dedicación que pongo en cada proyecto. Cada opinión compartida por mis clientes es una prueba del compromiso y el esfuerzo que entrego para superar expectativas. Ellos confiaron en mí y, con sus historias, muestran cómo mi trabajo transformó sus ideas en resultados reales. Desde soluciones creativas hasta un servicio personalizado, sus experiencias son mi mejor carta de presentación.",
+        "videoError": "Tu navegador no soporta la etiqueta de video.",
         "reviews": [
             {
                 image: 'images/reviews/redtic.jpg',
@@ -201,8 +217,9 @@ const ES = {
             }
         ]
     },
-    "contact": {
-        "title": "¿Tienes una idea increíble? Hablemos",
+    "formEmail": {
+        "title": "¿Tienes una idea de proyecto increíble? Hablemos",
+        "boldWords": ["Hablemos"],
         "emailPlaceholder": "Ingresa tu Correo Electrónico",
         "sendButtonLabel": "Enviar"
     },
