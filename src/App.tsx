@@ -37,9 +37,9 @@ function App() {
 
       {/* Botón para alternar el tema */}
       <button
-        id="toggle"
+        id="toggle-lang"
         onClick={toggleLang}
-        className={(theme === "dark" ? "text-stone-700" : "text-gray-300") + " top-4 left-4 p-2 rounded font-bold"}
+        className={(theme === "dark" ? "text-stone-700" : "text-gray-300") + " xsm:text-2xl xl:text-xl top-4 left-4 p-2 rounded font-bold"}
       >
             {lang.toUpperCase()}
       </button>
