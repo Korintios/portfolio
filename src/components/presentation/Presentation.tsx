@@ -62,7 +62,7 @@ export default function Presentation({darkMode = true, lang}: {darkMode: boolean
 						{lang.contactInfo.slice(0,3).map((social, index) => {
 							return (
 								<div key={index} className="flex flex-row gap-3 items-center">
-									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px] " + (social.href && "hover:bg-[#0085FF] hover:text-white transition-colors")}>
+									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px]"}>
 										<social.icon />
 									</a>
 									<span className="italic text-xl font-medium">{social.text}</span>
@@ -74,7 +74,7 @@ export default function Presentation({darkMode = true, lang}: {darkMode: boolean
 						{lang.contactInfo.slice(3,6).map((social, index) => {
 							return (
 								<div key={index} className="flex flex-row gap-3 items-center">
-									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px] " + (social.href && "hover:bg-[#0085FF] hover:text-white transition-colors")}>
+									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px]"}>
 										<social.icon />
 									</a>
 									<span className="italic text-xl font-medium">{social.text}</span>
