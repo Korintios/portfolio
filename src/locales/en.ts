@@ -20,7 +20,7 @@ const EN: Lang = {
         "downloadCVText": "Download CV",
         "experiences": [
             {
-                "count": "1.5+",
+                "count": "3.0+",
                 "description": "Years of experience...",
                 "details": "Hello, I am Juan Camilo. I am a full-stack developer experienced in diverse technologies, as well as a UI/UX designer in progress, focused on creating intuitive and engaging user experiences."
             },          
