@@ -2,6 +2,8 @@ import EmailIcon from "../assets/icons/Email";
 import PersonIcon from "../assets/icons/Person";
 import PhoneIcon from "../assets/icons/Phone";
 import LocationIcon from "../assets/icons/Places";
+import GitHub from "../assets/icons/socials/Github";
+import Linkedin from "../assets/icons/socials/Linkedin";
 import University from "../assets/icons/University";
 import Work from "../assets/icons/Work";
 import { Lang } from "../types";
@@ -32,7 +34,13 @@ const EN: Lang = {
         "contactInfo": [
             {
                 "icon": PhoneIcon,
-                "text": "+57 3147685292"
+                "text": "+57 3147685292",
+                "href": "https://wa.me/573147685292?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofreces%2C%20Juan%20Camilo%20V.M.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+            },
+            {
+                "icon": Linkedin,
+                "text": "Juan Camilo V.M",
+                "href": "https://www.linkedin.com/in/juan-camilo-vergara-marin-a50805263/"
             },
             {
                 "icon": PersonIcon,
@@ -40,7 +48,13 @@ const EN: Lang = {
             },
             {
                 "icon": EmailIcon,
-                "text": "juanvergaram@outlook.com"
+                "text": "juanvergaram@outlook.com",
+                "href": "mailto:juanvergaram@outlook.com"
+            },
+            {
+                "icon": GitHub,
+                "text": "Korintios",
+                "href": "https://github.com/Korintios"
             },
             {
                 "icon": LocationIcon,

@@ -59,24 +59,24 @@ export default function Presentation({darkMode = true, lang}: {darkMode: boolean
 			<motion.div className={getClass(darkMode, "text") + "flex flex-col gap-5 xsm:w-[300px] md:w-[400px] xl:w-[600px]"} initial={{ opacity: 0, x: 50 }} animate={{opacity: 1, x: 0}} transition={{ duration: 1.5 }}>
 				<div className="flex xsm:flex-col xl:flex-row xsm:justify-center xl:justify-start flex-wrap gap-5">
 					<div className="flex flex-col gap-6">
-						{lang.contactInfo.slice(0,2).map((social, index) => {
+						{lang.contactInfo.slice(0,3).map((social, index) => {
 							return (
 								<div key={index} className="flex flex-row gap-3 items-center">
-									<div className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px]"}>
+									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px] " + (social.href && "hover:bg-[#0085FF] hover:text-white transition-colors")}>
 										<social.icon />
-									</div>
+									</a>
 									<span className="italic text-xl font-medium">{social.text}</span>
 								</div>
 							)
 						})}
 					</div>
 					<div className="flex flex-col gap-6">
-						{lang.contactInfo.slice(2,4).map((social, index) => {
+						{lang.contactInfo.slice(3,6).map((social, index) => {
 							return (
 								<div key={index} className="flex flex-row gap-3 items-center">
-									<div className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px]"}>
+									<a href={social.href ?? social.href} target="_blank" className={getClass(darkMode, "backgroundSocials") + "flex items-center justify-center rounded-full w-[40px] h-[40px] " + (social.href && "hover:bg-[#0085FF] hover:text-white transition-colors")}>
 										<social.icon />
-									</div>
+									</a>
 									<span className="italic text-xl font-medium">{social.text}</span>
 								</div>
 							)

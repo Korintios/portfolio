@@ -27,6 +27,7 @@ export interface PresentationLang {
     contactInfo: {
         icon: () => JSX.Element;
         text: string;
+        href?: string;
     }[];
 }
 
