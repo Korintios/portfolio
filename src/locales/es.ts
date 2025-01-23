@@ -142,6 +142,18 @@ const ES: Lang = {
                 },
                 icon: University,
             },
+            {
+                date: "Enero 2025 — Actualmente",
+                title: "Backendito",
+                subtitle: "Desarrollador Full Stack",
+                description:
+                    "Actualmente, formo parte de un equipo dinámico en una startup innovadora que se enfoca en abordar y solucionar una amplia gama de desafíos dentro del ecosistema del software. Mi rol implica el desarrollo, implementación y optimización de diversas herramientas y soluciones tecnológicas, las cuales domino con un alto grado de expertise y precisión. Esta experiencia me ha permitido no solo consolidar mis habilidades técnicas, sino también contribuir de manera significativa a proyectos que buscan transformar y mejorar procesos dentro de la industria.",
+                styles: {
+                    content: { color: "#000", borderTop: "2px solid #121142" },
+                    icon: { backgroundColor: "#121142", color: "#fff" },
+                },
+                icon: Work,
+            },
         ]
     },
     "whyHireMe": {
@@ -233,6 +245,13 @@ const ES: Lang = {
                 title: 'Agencia de Publicidad',
                 score: 5,
                 review: 'En Seisk, su capacidad para gestionar bases de datos y documentar procesos de manera precisa fue clave para el éxito de nuestros proyectos. Siempre priorizó la comodidad del cliente y las necesidades de la empresa, adaptándose rápidamente a cualquier reto.'
+            },
+            {
+                image: 'images/reviews/backendito.jpg',
+                name: 'Backendito Corp.',
+                title: 'Corporacion de Desarrollo',
+                score: 5,
+                review: '¡Excelente predisposición, comunicación clara y efectiva, trato amable y profesional con el cliente, trabajo ágil y, sobre todo, de altísima calidad! Estoy totalmente satisfecho con el servicio brindado y lo recomendaría sin dudarlo. ¡Un placer haber trabajado con un equipo tan competente y comprometido!'
             }
         ]
     },

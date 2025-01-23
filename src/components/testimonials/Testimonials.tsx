@@ -28,7 +28,7 @@ export default function Testimonials({lang}: {lang: TestimonialsLang}) {
 			<div className="testimonials flex flex-col gap-7">
 				<div className="flex flex-col items-center gap-3">
 					<h1 className="xsm:text-4xl xl:text-7xl font-bold xsm:w-[300px] xl:w-[700px]"><HighlightText text={lang.title} boldWords={lang.boldWords} withClass/></h1>
-					<p className="xsm:text-md 2xl:text-xl font-normal w-auto leading-relaxed whitespace-normal">{lang.description}</p>
+					<p className="xsm:text-md 2xl:text-xl font-normal xsm:w-[20rem] sm:w-[40rem] md:w-[50rem] xl:w-[80rem] leading-relaxed whitespace-normal">{lang.description}</p>
 				</div>
 				<div
 					className={
@@ -40,7 +40,7 @@ export default function Testimonials({lang}: {lang: TestimonialsLang}) {
 						<div
 							key={index}
 							className={
-								"flex flex-col gap-3 xl:w-[785px] xl:h-[230px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
+								"flex flex-col gap-3 xl:w-[785px] xsm:h-[470px] sm:h-[450px] xl:h-[230px] bg-white bg-opacity-15 p-3 rounded-md text-white " +
 								(index === 0 ? "one" : "")
 							}
 						>
@@ -54,7 +54,7 @@ export default function Testimonials({lang}: {lang: TestimonialsLang}) {
 									<span className="text-lg font-semibold h-[21px] truncate">
 										{testimonial.name}
 									</span>
-									<span className="text-md">{testimonial.title}</span>
+									<span className="text-md text-left">{testimonial.title}</span>
 								</div>
 							</div>
 							<div className="flex flex-row items-center gap-3">
