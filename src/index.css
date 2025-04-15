@@ -1,44 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-section {
-    @apply px-40 !important;
-    font-family: "IBM Plex Sans";
-}
-
-.text-gradient-blue {
-    @apply bg-gradient-to-r;
-    @apply from-[#0085FF];
-    @apply to-[#69B4FF];
-    @apply inline-block;
-    @apply text-transparent;
-    @apply bg-clip-text;
-}
-
-@media (max-width: 1480px) {
-  section {
-      @apply px-32 !important;
-  }
-}
-
-@media (min-width: 1280px) {
-    section {
-        @apply px-24 !important;
-    }
-}
-
-@media (max-width: 821px) {
-    section {
-        @apply px-8 !important;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-        @apply px-4 !important;
-    }
-}
+@import "tailwindcss";
 
 .sphere-animation {
     width: 0;
