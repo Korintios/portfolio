@@ -5,7 +5,7 @@ export default function AboutMe() {
     const { t } = useTranslation("aboutme")
 
     return (
-        <section className="p-10 xl:p-20 flex flex-col xl:flex-row gap-10 xl:gap-0 xl:items-center xl:justify-between min-h-screen">
+        <section id="aboutme" className="p-10 xl:p-20 flex flex-col xl:flex-row gap-10 xl:gap-0 xl:items-center xl:justify-between min-h-screen">
             <div className="flex flex-col gap-5">
                 <h1 className="uppercase text-white font-hubballi text-2xl md:text-5xl max-w-[610px]">{t('title')}</h1>
                 <p className="xsm:w-full xl:w-[600px] 2xl:w-[750px] font-poppins md:text-3xl xl:text-2xl font-light leading-relaxed whitespace-normal text-info">
