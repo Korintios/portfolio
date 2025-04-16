@@ -9,7 +9,7 @@ export default function Presentation() {
 		const formatName = (src.split('/')[1].split('.')[0])
 
 		return (
-			<a href={href != undefined ? href : undefined} className={"cursor-pointer size-[50px] xl:size-[77px] rounded-xl shadow-icon ring-2 ring-black flex items-center justify-center bg-gradient-to-b from-[#121212]" + (isHover ? " hover:from-[#1a1a1a] " : "") + " to-black"}>
+			<a href={href != undefined ? href : undefined} className={"size-[50px] xl:size-[77px] rounded-xl shadow-icon ring-2 ring-black flex items-center justify-center bg-gradient-to-b from-[#121212]" + (isHover ? " cursor-pointer hover:from-[#1a1a1a] " : "") + " to-black"}>
 				<img className={(isPulse ? "animate-pulse " : "") + "scale-75 xl:scale-100"} src={src} alt={formatName} />
 			</a>
 		)
