@@ -1,23 +1,25 @@
-import { getClass } from "../../constants/THEME"
-import { AboutLang } from "../../types"
-import HighlightText from "../../utils/texts"
+import { useTranslation } from "react-i18next"
 
-export default function AboutMe({darkMode = true, lang}: {darkMode: boolean, lang: AboutLang}) {
+export default function AboutMe() {
+
+    const { t } = useTranslation("aboutme")
+
     return (
-        <section className={getClass(darkMode, 'background') + getClass(darkMode, 'text') + "flex xsm:flex-col xsm:justify-center xl:justify-between xsm:gap-10 xl:gap-0 xl:flex-row items-center h-screen"}>
+        <section className="p-10 xl:p-20 flex flex-col xl:flex-row gap-10 xl:gap-0 xl:items-center xl:justify-between min-h-screen">
             <div className="flex flex-col gap-5">
-                <h1 className="xsm:text-5xl xl:text-6xl font-bold"><HighlightText text={lang.title.text} boldWords={lang.title.boldWords} withClass/></h1>
-                <p className="xsm:w-full xl:w-[500px] text-xl font-light leading-relaxed whitespace-normal">
-                    <HighlightText text={lang.description.text} boldWords={lang.description.boldWords} withClass/>
+                <h1 className="uppercase text-white font-hubballi text-2xl md:text-5xl max-w-[610px]">{t('title')}</h1>
+                <p className="xsm:w-full xl:w-[600px] 2xl:w-[750px] font-poppins md:text-3xl xl:text-2xl font-light leading-relaxed whitespace-normal text-info">
+                    {t('description.paragraph1')}
+                    <br/><br/>
+                    {t('description.paragraph2')}
                 </p>
-
             </div>
-            <div className="xl:flex flex-wrap items-center justify-center w-[700px] gap-5 xsm:hidden">
-                <img src="images/computer.jpg" alt="" className={getClass(darkMode, "shadowColor") + "bg-blue-400 w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"}/>
-                <div className="flex flex-col gap-5 xsm:mb-10 xl:mb-0">
-                    <img src="images/ui.jpg" alt="" className={getClass(darkMode, "shadowColor") + "bg-blue-400 w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"}/>
-                    <img src="images/superation.jpg" alt="" className={getClass(darkMode, "shadowColor") + "bg-blue-400 w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"}/>
-                </div>
+            <div className="flex flex-1 flex-wrap items-center justify-center xl:w-[700px] gap-5">
+                <img src="images/me.jpeg" alt="me image" className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"/>
+                {/* <div className="flex flex-col gap-5 xsm:mb-10 xl:mb-0">
+                    <img src="#" alt="me image 2" className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"/>
+                    <img src="#" alt="me image 3" className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"/>
+                </div> */}
             </div>
         </section>
     )
