@@ -4,4 +4,13 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-hubballi: 'Hubballi';
   --shadow-icon: 0 0 10px 0.2px rgba(204, 204, 204, 0.5);
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-primary: #B2B2B2;
+  --color-info: #828282;
+  --color-iconcard-gradient-start: #121212;
+  --color-iconcard-gradient-hover: #1A1A1A;
+  --color-background-image: #1E1E1E;
+  --color-button-gradient-to: #C4C4C4;
+  --color-button-gradient-to-hover: #C4C4C4;
 }
