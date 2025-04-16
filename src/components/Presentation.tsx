@@ -23,7 +23,7 @@ export default function Presentation() {
 				<p className="text-info font-poppins max-w-[700px] text-sm md:text-xl">{t('description')}</p>
 				<div className="flex flex-row gap-4 mt-2">
 					<button className="font-poppins font-semibold text-xs sm:text-sm xl:text-[15px] cursor-pointer min-w-[139px] px-4 min-h-[43.61px] rounded-xl bg-linear-to-b from-white to-button-gradient-to hover:to-button-gradient-to-hover">{t('knowMe')}</button>
-					<a href="docs/cv.pdf" className="font-poppins text-center content-center font-semibold text-sm xl:text-[15px]  cursor-pointer min-w-[139px] min-h-[43.61px] rounded-xl border-2 border-info text-info hover:bg-[#0e0e0e]">{t('viewCV')}</a>
+					<a href="docs/cv.pdf" className="font-poppins grid place-content-center font-semibold text-sm xl:text-[15px]  cursor-pointer min-w-[139px] min-h-[43.61px] rounded-xl border-2 border-info text-info hover:bg-[#0e0e0e]">{t('viewCV')}</a>
 				</div>
 			</div>
 			<div className="flex flex-col gap-10 xl:gap-0 mt-10 sm:mt-0 md:flex-row justify-between">
