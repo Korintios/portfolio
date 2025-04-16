@@ -1,4 +1,4 @@
-import AboutMe from "./aboutMe/AboutMe";
+import AboutMe from "./AboutMe";
 import Presentation from "./Presentation";
 
 export default function Portfolio() {
