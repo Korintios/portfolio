@@ -1,0 +1,61 @@
+{
+	"title": "Discover My Projects",
+	"portfolio": [
+		{
+			"title": "Hair Salon App",
+			"description": "Hair salon application to manage appointments, clients, services, and products.",
+			"image": "images/projects/hairsalon.jpg",
+			"link": "https://hair-salon-app.onrender.com",
+			"github": "https://github.com/Korintios/hair_salon-app",
+			"tags": [
+				"HTML",
+				"CSS",
+				"TailwindCSS",
+				"JavaScript",
+				"NodeJS",
+				"Prisma",
+				"React",
+				"NextJS",
+				"SQLite"
+			]
+		},
+		{
+			"title": "Math Project",
+			"description": "Math project to solve mathematical problems.",
+			"image": "images/projects/math.jpg",
+			"link": "https://project-math-one.vercel.app/",
+			"github": "https://github.com/Korintios/project-math",
+			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "NodeJS", "React", "NextJS"]
+		},
+		{
+			"title": "EasyferrumJS",
+			"description": "JavaScript library to retrieve data from the university app of Comfenalco University.",
+			"image": "images/projects/easyferrumjs.jpg",
+			"github": "https://github.com/Korintios/easyferrumjs",
+			"tags": ["JavaScript", "NodeJS"]
+		},
+		{
+			"title": "MiLogin",
+			"description": "Minecraft plugin focused on authentication security on servers.",
+			"image": "images/projects/milogin.jpg",
+			"github": "https://github.com/Korintios/milogin",
+			"tags": ["Java"]
+		},
+		{
+			"title": "Bingo App",
+			"description": "Bingo application to create your own customized cards and print them.",
+			"image": "images/projects/bingo.jpg",
+			"link": "https://bingo-app-theta.vercel.app/",
+			"github": "https://github.com/Korintios/bingo-app",
+			"tags": ["HTML", "CSS", "TailwindCSS", "TypeScript", "NodeJS", "React", "NextJS"]
+		},
+		{
+			"title": "To-Do App",
+			"description": "To-do app to manage your pending tasks.",
+			"image": "images/projects/todo.jpg",
+			"link": "https://korintios.github.io/todo-app/",
+			"github": "https://github.com/Korintios/todo-app",
+			"tags": ["HTML", "CSS", "JavaScript"]
+		}
+	]
+}
