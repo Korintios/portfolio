@@ -11,12 +11,9 @@ import { ProjectType } from "../types";
 
 export default function Projects() {
 	const { t } = useTranslation("projects");
-	const portfolioObjects = t("portfolio", {
-		returnObjects: true,
-	}) as Array<ProjectType>;
-	const portfolioArray = Array.isArray(portfolioObjects)
-		? portfolioObjects.concat(portfolioObjects)
-		: [];
+
+	const portfolioObjects = t("portfolio", {returnObjects: true}) as Array<ProjectType>;
+	const portfolioArray = Array.isArray(portfolioObjects) ? portfolioObjects.concat(portfolioObjects) : [];
 
 	function GitHubIcon() {
 		return (
@@ -125,7 +122,7 @@ export default function Projects() {
 								</div>
 								<div className="flex flex-col gap-2 text-start">
 									<h2 className="font-hubballi text-xl font-normal text-white/50">
-										Tecnologias Utilizadas
+										{t('technologies')}
 									</h2>
 									<div className="flex flex-wrap gap-2 pointer-events-none">
 										{project.tags.map((tag, index: number) => (

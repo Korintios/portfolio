@@ -28,7 +28,7 @@ i18n
         projects: PROJECTS_EN
       }
     },
-    lng: 'en',
+    lng: 'es',
     fallbackLng: 'en',
     ns: ['presentation', 'aboutme', 'projects'],
     interpolation: {
