@@ -7,11 +7,13 @@ import { initReactI18next } from 'react-i18next';
 import PRESENTATION_ES from './locales/es/presentation.json';
 import ABOUTME_ES from './locales/es/aboutme.json';
 import PROJECTS_ES from './locales/es/projects.json';
+import SERVICES_ES from './locales/es/services.json';
 
 // English Translations
 import PRESENTATION_EN from './locales/en/presentation.json';
 import ABOUTME_EN from './locales/en/aboutme.json';
 import PROJECTS_EN from './locales/en/projects.json';
+import SERVICES_EN from './locales/en/services.json';
 
 i18n
   .use(initReactI18next)
@@ -20,17 +22,19 @@ i18n
       es: {
         presentation: PRESENTATION_ES,
         aboutme: ABOUTME_ES,
-        projects: PROJECTS_ES
+        projects: PROJECTS_ES,
+        services: SERVICES_ES
       },
       en: {
         presentation: PRESENTATION_EN,
         aboutme: ABOUTME_EN,
-        projects: PROJECTS_EN
+        projects: PROJECTS_EN,
+        services: SERVICES_EN
       }
     },
     lng: 'es',
     fallbackLng: 'en',
-    ns: ['presentation', 'aboutme', 'projects'],
+    ns: ['presentation', 'aboutme', 'projects', 'services'],
     interpolation: {
       escapeValue: false
     }

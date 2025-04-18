@@ -1,0 +1,45 @@
+{
+	"title": "What services do I offer?",
+	"description": {
+		"paragraph1": "Do you have an idea, product, or business that needs a digital presence? I'm here to help you take it to the next level. I specialize in crafting modern interfaces, optimizing user experiences, and leading technical projects with tailored solutions. Each service I offer is designed to deliver real value, align with your goals, and make your project stand out.",
+		"paragraph2": "I am committed to delivering high-quality work that meets your needs and exceeds your expectations. With over 5 years of experience in the industry, I have successfully completed more than 20 projects, and I am dedicated to ensuring that every project I undertake is a success. My goal is to help you achieve your vision and create a digital presence that truly represents your brand."
+	},
+	"statistics": [
+		{
+			"value": "3+",
+			"label": "Years of experience"
+		},
+		{
+			"value": "10+",
+			"label": "Projects developed"
+		},
+		{
+			"value": "7+",
+			"label": "Clients satisfied around the world"
+		}
+	],
+	"services": [
+		{
+			"title": "Modern Frontend Development",
+			"description": "Design and implementation of responsive, scalable, and user-focused interfaces using React, TypeScript, JavaScript, and TailwindCSS.",
+      "image": "gifs/frontend.gif",
+			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "React"]
+		},
+		{
+			"title": "Fullstack Development with PHP + MySQL",
+			"description": "Building complete applications with robust backend, relational databases, and custom admin panels.",
+      "image": "gifs/fullstack.gif",
+			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "PHP", "MySQL"]
+		},
+		{
+			"title": "Technical Leadership & CTO",
+			"description": "Technical guidance for startups or small teams, helping define architecture, tools, workflows, and overall tech supervision.",
+      "image": "gifs/cto.gif",
+			"tags": [
+				"Technical Leadership",
+				"Software Architecture",
+				"Agile Methodologies"
+			]
+		}
+	]
+}

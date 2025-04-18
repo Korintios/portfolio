@@ -1,10 +1,19 @@
-export interface ProjectType {
+interface CardType {
     title: string;
     description: string;
     image?: string | undefined;
+    tags: string[];
+}
+export interface ProjectType extends CardType {
     link?: string;
     github: string;
-    tags: string[];
+}
+
+export interface ServicesType extends CardType {
+    statistics: {
+        value: string;
+        label: string;
+    }[];
 }
 
 export type ProjectArrayType = Array<ProjectType>;

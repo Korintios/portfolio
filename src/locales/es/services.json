@@ -1,0 +1,45 @@
+{
+	"title": "¿Qué servicios ofrezco?",
+	"description": {
+		"paragraph1": "¿Tienes una idea, producto o negocio que necesita una presencia digital? Estoy aquí para ayudarte a llevarlo al siguiente nivel. Me especializo en crear interfaces modernas, optimizar experiencias de usuario y liderar proyectos técnicos con soluciones a medida. Cada servicio que ofrezco está diseñado para aportar un valor real, alinearse con tus objetivos y hacer que tu proyecto destaque.",
+		"paragraph2": "Estoy comprometido a entregar un trabajo de alta calidad que satisfaga tus necesidades y supere tus expectativas. Con más de 5 años de experiencia en la industria, he completado con éxito más de 20 proyectos, y estoy dedicado a asegurar que cada proyecto que emprendo sea un éxito. Mi objetivo es ayudarte a lograr tu visión y crear una presencia digital que represente verdaderamente tu marca."
+	},
+	"statistics": [
+		{
+			"value": "3+",
+			"label": "Años de experiencia"
+		},
+		{
+			"value": "10+",
+			"label": "Proyectos desarrollados"
+		},
+		{
+			"value": "7+",
+			"label": "Clientes satisfechos alrededor del mundo"
+		}
+	],
+	"services": [
+		{
+			"title": "Desarrollo Frontend Moderno",
+			"description": "Diseño e implementación de interfaces responsivas, escalables y centradas en la experiencia del usuario, utilizando React, TypeScript, JavaScript y TailwindCSS.",
+      "image": "gifs/frontend.gif",
+			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "React"]
+		},
+		{
+			"title": "Desarrollo Fullstack con PHP + MySQL",
+			"description": "Creación de aplicaciones completas con backend robusto, bases de datos relacionales y paneles administrativos personalizados.",
+      "image": "gifs/fullstack.gif",
+			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "PHP", "MySQL"]
+		},
+		{
+			"title": "Liderazgo Técnico & CTO",
+			"description": "Acompañamiento técnico para startups o equipos pequeños, ayudando a definir arquitectura, herramientas, flujos de trabajo y supervisión técnica.",
+      "image": "gifs/cto.gif",
+			"tags": [
+				"Liderazgo Tecnico",
+				"Arquitectura de Software",
+				"Metodologías Ágiles"
+			]
+		}
+	]
+}
