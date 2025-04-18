@@ -13,7 +13,7 @@ export default function Projects() {
 	const { t } = useTranslation("projects");
 
 	const portfolioObjects = t("portfolio", {returnObjects: true}) as Array<ProjectType>;
-	const portfolioArray = Array.isArray(portfolioObjects) ? portfolioObjects.concat(portfolioObjects) : [];
+	const portfolioArray = Array.isArray(portfolioObjects) ? portfolioObjects : [];
 
 	function GitHubIcon() {
 		return (
@@ -51,7 +51,7 @@ export default function Projects() {
 	}
 
 	return (
-		<section id="projects" className=" justify-center min-h-screen sm:h-screen text-white">
+		<section id="projects" className="justify-center min-h-screen text-white">
 			<h1 className="xl:px-20 py-10 uppercase text-center xl:text-left font-hubballi text-2xl md:text-5xl w-full">
 				{t("title")}
 			</h1>

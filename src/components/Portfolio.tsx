@@ -1,6 +1,7 @@
 import AboutMe from "./AboutMe";
 import Presentation from "./Presentation";
 import Projects from "./Projects";
+import Services from "./Services";
 
 export default function Portfolio() {
 	return (
@@ -8,6 +9,7 @@ export default function Portfolio() {
 			<Presentation />
 			<AboutMe />
 			<Projects />
+			<Services />
 		</div>
 	);
 }
