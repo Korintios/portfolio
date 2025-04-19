@@ -1,0 +1,30 @@
+{
+    "title": "Testimonials About My Results",
+    "boldWords": ["My Results"],
+    "description": "My testimonials are not just words; they are the genuine reflection of the passion, quality, and dedication I put into every project. Each review shared by my clients is proof of the commitment and effort I deliver to exceed expectations. They trusted me, and through their stories, they show how my work transformed their ideas into real results. From creative solutions to personalized service, their experiences are my best introduction.",
+    "videoError": "Your browser does not support the video tag.",
+    "reviews": [
+      {
+        "image": "images/reviews/redtic.jpg",
+        "name": "REDTIC",
+        "title": "Company",
+        "score": 5,
+        "review": "Working with Juan Camilo has been an invaluable experience. His focus on quality and his ability to deliver quick and effective solutions are unmatched. During his time with us at REDTIC, he demonstrated a deep commitment to developing modules and implementing servers, always ensuring the highest technical and practical standards."
+      },
+      {
+        "image": "images/reviews/seisk.jpg",
+        "name": "Seisk",
+        "title": "Advertising Agency",
+        "score": 5,
+        "review": "At Seisk, his ability to manage databases and document processes accurately was key to the success of our projects. He always prioritized client comfort and the company's needs, adapting quickly to any challenge."
+      },
+      {
+        "image": "images/reviews/backendito.jpg",
+        "name": "Backendito Corp.",
+        "title": "Development Corporation",
+        "score": 5,
+        "review": "Excellent attitude, clear and effective communication, friendly and professional client interaction, agile work, and above all, outstanding quality! I am completely satisfied with the service provided and would recommend it without hesitation. It was a pleasure working with such a competent and committed team!"
+      }
+    ]
+  }
+  

@@ -9,6 +9,7 @@ import ABOUTME_ES from './locales/es/aboutme.json';
 import PROJECTS_ES from './locales/es/projects.json';
 import SERVICES_ES from './locales/es/services.json';
 import TIMELINE_ES from './locales/es/timeline.json';
+import TESTIMONIALS_ES from './locales/es/testimonials.json';
 
 // English Translations
 import PRESENTATION_EN from './locales/en/presentation.json';
@@ -16,6 +17,8 @@ import ABOUTME_EN from './locales/en/aboutme.json';
 import PROJECTS_EN from './locales/en/projects.json';
 import SERVICES_EN from './locales/en/services.json';
 import TIMELINE_EN from './locales/en/timeline.json';
+import TESTIMONIALS_EN from './locales/en/testimonials.json';
+
 
 i18n
   .use(initReactI18next)
@@ -26,19 +29,21 @@ i18n
         aboutme: ABOUTME_ES,
         projects: PROJECTS_ES,
         services: SERVICES_ES,
-        timeline: TIMELINE_ES
+        timeline: TIMELINE_ES,
+        testimonials: TESTIMONIALS_ES
       },
       en: {
         presentation: PRESENTATION_EN,
         aboutme: ABOUTME_EN,
         projects: PROJECTS_EN,
         services: SERVICES_EN,
-        timeline: TIMELINE_EN
+        timeline: TIMELINE_EN,
+        testimonials: TESTIMONIALS_EN
       }
     },
     lng: 'es',
     fallbackLng: 'en',
-    ns: ['presentation', 'aboutme', 'projects', 'services', 'timeline'],
+    ns: ['presentation', 'aboutme', 'projects', 'services', 'timeline', 'testimonials'],
     interpolation: {
       escapeValue: false
     }
