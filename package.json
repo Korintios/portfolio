@@ -17,6 +17,7 @@
     "react-dom": "^18.3.1",
     "react-i18next": "^15.4.1",
     "react-vertical-timeline-component": "^3.5.3",
+    "swiper": "^11.2.6",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
