@@ -1,0 +1,54 @@
+{
+	"title": "Mi Línea de Tiempo",
+	"events": [
+		{
+			"date": "Febrero de 2021 — Noviembre de 2023",
+			"title": "FUNDACIÓN UNIVERSITARIA TECNOLÓGICO COMFENALCO",
+			"subtitle": "Tecnólogo en Desarrollo de Software",
+			"description": "Adquirí una base sólida en programación, comenzando con Python y luego profundizando en Java con enfoque orientado a objetos. Estos conocimientos sentaron las bases para mi carrera como desarrollador.",
+			"type": "university"
+		},
+		{
+			"date": "Agosto de 2022 — Octubre de 2023",
+			"title": "REDTIC",
+			"subtitle": "Desarrollador Web (PHP)",
+			"description": "Lideré el desarrollo de módulos personalizados en PHP, gestioné entornos de prueba/producción en Linux, y colaboré activamente con el equipo para entregar soluciones eficientes y de alta calidad.",
+			"type": "work"
+		},
+		{
+			"date": "Enero de 2024 — Marzo de 2024",
+			"title": "REDTIC",
+			"subtitle": "Desarrollador Web (PHP)",
+			"description": "Di mantenimiento a una aplicación existente, añadí funcionalidades nuevas y optimicé el sistema, asegurando un rendimiento eficiente y una buena experiencia de usuario.",
+			"type": "work"
+		},
+		{
+			"date": "Julio de 2024 — Octubre de 2024",
+			"title": "Seisk Agencia de Publicidad",
+			"subtitle": "Desarrollador Web Fullstack",
+			"description": "Desarrollé una app web desde cero usando PHP, CodeIgniter y MySQL. Gestioné frontend, backend y base de datos, implementando funcionalidades clave y liderando el proyecto completo.",
+			"type": "work"
+		},
+		{
+			"date": "Septiembre de 2024 — Octubre de 2024",
+			"title": "Lumxis",
+			"subtitle": "Desarrollador Móvil (React Native)",
+			"description": "Lideré la interfaz móvil en React Native con Expo, coordiné arquitectura frontend y propuse soluciones eficientes en ciclos de desarrollo rápidos.",
+			"type": "work"
+		},
+		{
+			"date": "Febrero de 2024 — Actualmente",
+			"title": "FUNDACIÓN UNIVERSITARIA TECNOLÓGICO COMFENALCO",
+			"subtitle": "Ingeniero de Sistemas",
+			"description": "Actualmente me enfoco en el desarrollo de proyectos de calidad y en aplicar conceptos avanzados de programación para entregar soluciones innovadoras.",
+			"type": "university"
+		},
+		{
+			"date": "Febrero de 2025 — Actualmente",
+			"title": "Backendito",
+			"subtitle": "CTO & Desarrollador Frontend",
+			"description": "Lidero la planificación técnica de proyectos, desarrollo interfaces modernas con React y React Native, y gestiono al equipo usando metodologías ágiles. También participo en reuniones clave con clientes y tomo decisiones de arquitectura.",
+			"type": "work"
+		}
+	]
+}

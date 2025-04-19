@@ -1,0 +1,54 @@
+{
+	"title": "My Timeline",
+	"events": [
+		{
+			"date": "February 2021 — November 2023",
+			"title": "FUNDACIÓN UNIVERSITARIA TECNOLÓGICO COMFENALCO",
+			"subtitle": "Software Development Technologist",
+			"description": "I gained a solid foundation in programming, starting with Python and later diving into object-oriented Java. These skills laid the groundwork for my development career.",
+			"type": "university"
+		},
+		{
+			"date": "August 2022 — October 2023",
+			"title": "REDTIC",
+			"subtitle": "Web Developer (PHP)",
+			"description": "Led the development of custom PHP modules, managed Linux testing/production environments, and collaborated closely with the team to deliver high-quality, efficient solutions.",
+			"type": "work"
+		},
+		{
+			"date": "January 2024 — March 2024",
+			"title": "REDTIC",
+			"subtitle": "Web Developer (PHP)",
+			"description": "Maintained and enhanced an existing PHP application, added new features, fixed bugs, and optimized system performance to ensure a better user experience.",
+			"type": "work"
+		},
+		{
+			"date": "July 2024 — October 2024",
+			"title": "Seisk Advertising Agency",
+			"subtitle": "Fullstack Web Developer",
+			"description": "Developed a web app from scratch using PHP, CodeIgniter, and MySQL. Handled frontend, backend, and database design, implementing key features and leading the full development process.",
+			"type": "work"
+		},
+		{
+			"date": "September 2024 — October 2024",
+			"title": "Lumxis",
+			"subtitle": "Mobile Developer (React Native)",
+			"description": "Led the development of the mobile interface with React Native and Expo, coordinated frontend architecture, and proposed efficient solutions in fast-paced development cycles.",
+			"type": "work"
+		},
+		{
+			"date": "February 2024 — Present",
+			"title": "FUNDACIÓN UNIVERSITARIA TECNOLÓGICO COMFENALCO",
+			"subtitle": "Systems Engineering",
+			"description": "Currently focused on developing high-quality projects and applying advanced programming concepts to deliver innovative solutions.",
+			"type": "university"
+		},
+		{
+			"date": "February 2025 — Present",
+			"title": "Backendito",
+			"subtitle": "CTO & Frontend Developer",
+			"description": "Lead technical project planning, develop modern interfaces with React and React Native, and manage the development team using agile methodologies. I also participate in key client meetings and make architectural decisions.",
+			"type": "work"
+		}
+	]
+}
