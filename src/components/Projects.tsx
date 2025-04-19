@@ -113,7 +113,7 @@ export default function Projects() {
 							</div>
 							<div className="flex flex-col gap-2">
 								<div className="flex flex-col gap-2 text-start">
-									<h1 className="font-hubballi text-2xl font-medium">
+									<h1 className="font-poppins text-2xl font-medium">
 										{project.title}
 									</h1>
 									<p className="font-poppins text-sm text-white/75">
@@ -121,7 +121,7 @@ export default function Projects() {
 									</p>
 								</div>
 								<div className="flex flex-col gap-2 text-start">
-									<h2 className="font-hubballi text-xl font-normal text-white/50">
+									<h2 className="font-poppins text-xl font-normal text-white/50">
 										{t('technologies')}
 									</h2>
 									<div className="flex flex-wrap gap-2 pointer-events-none">
