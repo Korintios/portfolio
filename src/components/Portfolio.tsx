@@ -2,6 +2,7 @@ import AboutMe from "./AboutMe";
 import Presentation from "./Presentation";
 import Projects from "./Projects";
 import Services from "./Services";
+import Testimonials from "./testimonials/Testimonials";
 import Timeline from "./Timeline";
 
 export default function Portfolio() {
@@ -12,6 +13,7 @@ export default function Portfolio() {
 			<Timeline />
 			<Projects />
 			<Services />
+			<Testimonials />
 		</div>
 	);
 }
