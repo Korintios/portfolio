@@ -17,8 +17,8 @@ export default function AboutMe() {
             <div className="flex flex-1 flex-wrap items-center justify-center xl:w-[700px] gap-5">
                 <img src="images/me.jpeg" alt="me image" className="bg-background-image w-[262px] h-[388px] scale-100 md:scale-150 lg:scale-100 rounded-lg object-cover shadow-2xl"/>
                 <div className="hidden 2xl:flex flex-col gap-5 xsm:mb-10 xl:mb-0 ">
-                    <div /* src="#" alt="me image 2" */ className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"/>
-                    <div /* src="#" alt="me image 3" */ className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl"/>
+                    <div /* src="#" alt="me image 2" */ className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl animate-pulse"/>
+                    <div /* src="#" alt="me image 3" */ className="bg-background-image w-[262px] h-[388px] rounded-lg object-cover shadow-2xl animate-pulse"/>
                 </div>
             </div>
         </section>
