@@ -8,6 +8,7 @@ import "swiper/css/free-mode";
 
 import { Autoplay, Pagination } from "swiper/modules";
 import { ProjectType } from "../types";
+import { DEFAULT_AUTOPLAY_OPTIONS, DEFAULT_BREAKPOINTS } from "../constants/sliders";
 
 export default function Projects() {
 	const { t } = useTranslation("projects");
@@ -64,30 +65,9 @@ export default function Projects() {
 				pagination={{
 					clickable: true,
 				}}
-				autoplay={{
-					delay: 0,
-					disableOnInteraction: false,
-					pauseOnMouseEnter: false,
-				}}
+				autoplay={DEFAULT_AUTOPLAY_OPTIONS}
 				speed={8000}
-				breakpoints={{
-					0: {
-						slidesPerView: 1,
-						spaceBetween: 10,
-					},
-					600: {
-						slidesPerView: 2,
-					},
-					750: {
-						slidesPerView: 2,
-					},
-					1280: {
-						slidesPerView: 3,
-					},
-					1880: {
-						slidesPerView: 4,
-					},
-				}}
+				breakpoints={DEFAULT_BREAKPOINTS}
 			>
 				{portfolioArray.map((project, index) => (
 					<SwiperSlide key={index}>
