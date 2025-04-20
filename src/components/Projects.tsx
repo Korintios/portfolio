@@ -91,25 +91,15 @@ export default function Projects() {
 			>
 				{portfolioArray.map((project, index) => (
 					<SwiperSlide key={index}>
-						<img
-							src={project.image}
-							alt="fondo"
-							className="absolute rounded-lg inset-0 w-full h-full object-cover z-0"
-						/>
+						<img src={project.image} alt="fondo" className="absolute rounded-lg inset-0 w-full h-full object-cover z-0"/>
 
 						<div className="absolute inset-0 bg-gradient-to-t rounded-lg to-black/40 z-10" />
 						<div className="absolute inset-0 bg-gradient-to-b rounded-lg to-black/90 z-10" />
 
 						<div className="relative z-20 p-5 rounded-lg text-white flex flex-col justify-between h-full">
 							<div className="flex flex-row justify-between">
-								<a href={project.github}>
-									<GitHubIcon />
-								</a>
-								{project.link && (
-									<a href={project.link}>
-										<ExternalLinkIcon />
-									</a>
-								)}
+								<a href={project.github}> <GitHubIcon /> </a>
+								{project.link && (<a href={project.link}> <ExternalLinkIcon /> </a>)}
 							</div>
 							<div className="flex flex-col gap-2">
 								<div className="flex flex-col gap-2 text-start">
@@ -126,10 +116,7 @@ export default function Projects() {
 									</h2>
 									<div className="flex flex-wrap gap-2 pointer-events-none">
 										{project.tags.map((tag, index: number) => (
-											<div
-												key={index}
-												className="border-2 border-info bg-iconcard-gradient-hover text-[12px] px-2 py-1 rounded-full"
-											>
+											<div key={index} className="border-2 border-info bg-iconcard-gradient-hover text-[12px] px-2 py-1 rounded-full">
 												{tag}
 											</div>
 										))}
