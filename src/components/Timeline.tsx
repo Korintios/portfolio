@@ -11,7 +11,7 @@ export default function Timeline() {
 
 	function universityIcon() {
 		return (
-			<svg xmlns="http://www.w3.org/2000/svg" className="scale-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<svg xmlns="http://www.w3.org/2000/svg" className="xl:scale-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path d="M22 12L12 6 2 12l10 6 10-6z" />
 				<path d="M6 18v-3" />
 				<path d="M18 18v-3" />
@@ -21,7 +21,7 @@ export default function Timeline() {
 
 	function workIcon() {
 		return (
-			<svg xmlns="http://www.w3.org/2000/svg" className="scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<svg xmlns="http://www.w3.org/2000/svg" className="xl:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path d="M2 7h20v14H2z" />
 				<path d="M16 3h-8v4h8V3z" />
 			</svg>
