@@ -23,7 +23,7 @@ body {
   width: 100%;
 }
 
-.swiper-slide {
+#projects .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -36,7 +36,12 @@ body {
   align-items: center;
 }
 
-.swiper-slide img {
+#testimonials .swiper-wrapper {
+  display: flex !important;
+  align-items: center !important;
+}
+
+#projects .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -44,10 +49,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .swiper {
+  #projects .swiper {
     padding: 10px !important;
   }
-  .swiper-slide {
+  #projects .swiper-slide {
     height: 395px !important;
   }
 }
