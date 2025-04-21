@@ -1,5 +1,5 @@
 import AboutMe from "./AboutMe";
-import Footer from "./footer/Footer";
+import Footer from "./Footer";
 import Meeting from "./Meeting";
 import Presentation from "./Presentation";
 import Projects from "./Projects";
