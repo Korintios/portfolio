@@ -1,0 +1,19 @@
+{
+	"aboutTitle": "Sobre Mí",
+	"aboutDescription": "Desde 2020 me dedico al desarrollo Frontend y al diseño de interfaces centradas en la experiencia del usuario. Además, desempeño el rol de CTO, guiando la visión técnica de los proyectos en los que participo.",
+	"connectTitle": "Conecta conmigo",
+	"linksTitle": "Links de Acceso",
+	"sections": [
+		{ "id": "presentation", "label": "Inicio" },
+		{ "id": "aboutme", "label": "Sobre Mí" },
+		{ "id": "timeline", "label": "Línea de Tiempo" },
+		{ "id": "projects", "label": "Proyectos" },
+		{ "id": "services", "label": "Servicios" },
+		{ "id": "testimonials", "label": "Testimonios" },
+		{ "id": "meeting", "label": "Reunión" }
+	],
+	"copyright": "Juan Camilo V.M. Todos los derechos reservados.",
+	"privacy": "Política de Privacidad",
+	"terms": "Términos de Servicio",
+	"cookies": "Política de Cookies"
+}

@@ -1,0 +1,19 @@
+{
+	"aboutTitle": "About Me",
+	"aboutDescription": "Since 2020, I’ve been focused on Frontend development and designing user-centered interfaces. I also serve as a CTO, guiding the technical vision of the projects I’m involved in.",
+	"connectTitle": "Connect with me",
+	"linksTitle": "Quick Links",
+	"sections": [
+		{ "id": "presentation", "label": "Home" },
+		{ "id": "aboutme", "label": "About Me" },
+		{ "id": "timeline", "label": "Timeline" },
+		{ "id": "projects", "label": "Projects" },
+		{ "id": "services", "label": "Services" },
+		{ "id": "testimonials", "label": "Testimonials" },
+		{ "id": "meeting", "label": "Meeting" }
+	],
+	"copyright": "Juan Camilo V.M. All rights reserved.",
+	"privacy": "Privacy Policy",
+	"terms": "Terms of Service",
+	"cookies": "Cookie Policy"
+}
