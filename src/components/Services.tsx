@@ -9,7 +9,7 @@ export default function Services() {
     const servicesArray = getTranslatedArray<ServicesType>(t, "services", []);
 
     return (
-        <section className="min-h-screen p-10 xl:p-20 flex flex-col gap-10">
+        <section id="services" className="min-h-screen p-10 xl:p-20 flex flex-col gap-10">
             <div className="flex flex-col gap-6">
                 <h1 className="text-white uppercase font-hubballi text-2xl md:text-5xl">{t('title')}</h1>
                 <p className="text-info font-poppins text-sm font-light xl:text-2xl 2xl:text-3xl">
