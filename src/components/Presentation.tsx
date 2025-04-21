@@ -23,9 +23,14 @@ export default function Presentation() {
 				<div className="flex flex-col gap-4">
 					<span className="uppercase text-primary font-poppins font-medium xl:text-xl text-left">{t('ctaText')}</span>
 					<div className="flex flex-wrap xl:flex-row gap-6">
-						{SOCIALS.map((social, index) => (
-							<IconCard color="#828282" key={index} icon={social.icon} href={social.url} isHover/>
-						))}
+						{SOCIALS.map((social, index) => {
+
+							const IconComponent = social.icon;
+							
+							return (
+								<IconCard key={index} icon={() => <IconComponent className="size-12 text-info"/>} href={social.url} isHover/>
+							)
+						})}
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">

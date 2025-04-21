@@ -1,15 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { SOCIALS } from "../constants/socials";
+import SOCIALS from "../constants/socials";
 import { goToSection } from "../utils/sections";
+import { getTranslatedArray } from "../utils/lng";
+import { SectionsType } from "../types";
 
 export default function Footer() {
 
   const { t } = useTranslation("footer");
-  const SECTIONS = t("sections", { returnObjects: true }) as {
-    id: string;
-    label: string;
-  }[];
-  const SECTIONS_ARRAY = Array.isArray(SECTIONS) ? SECTIONS : [];
+  const sectionsArray = getTranslatedArray<SectionsType>(t, "sections", []);
 
   return (
     <footer className="bg-info/5 text-info border-t border-info/30">
@@ -22,20 +20,24 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('connectTitle')}</h3>
-            <div className="flex space-x-4">
-              {SOCIALS.map((social, index) => (
-                <a key={index} href={social.url} className="hover:text-gray-300 transition-colors">
-                  <img className="size-8" src={social.icon} alt={social.name} />
-                  <span className="sr-only">{social.name}</span>
-                </a>
-              ))}
+            <div className="flex space-x-3.5">
+              {SOCIALS.map((social, index) => {
+
+                const IconComponent = social.icon;
+
+                return (
+                  <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="text-info hover:text-white transition-colors">
+                    <IconComponent className="size-8"/>
+                  </a>
+                )
+              })}
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('linksTitle')}</h3>
             <ul className="space-y-2 text-info text-sm">
-              {SECTIONS_ARRAY.map((section, index) => (
+              {sectionsArray.map((section, index) => (
                 <li key={index}>
                   <a onClick={() => goToSection(section.id)} className="cursor-pointer hover:text-white transition-colors">
                     {section.label}
