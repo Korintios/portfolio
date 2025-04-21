@@ -2,31 +2,14 @@ import { useTranslation } from "react-i18next";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { EventsType } from "../types";
+import Work from "../assets/icons/Work";
+import University from "../assets/icons/University";
+import { getTranslatedArray } from "../utils/lng";
 
 export default function Timeline() {
-	const { t } = useTranslation("timeline");
 	
-	const events = t("events", { returnObjects: true }) as EventsType;
-	const eventsArray = Array.isArray(events) ? events : []
-
-	function universityIcon() {
-		return (
-			<svg xmlns="http://www.w3.org/2000/svg" className="xl:scale-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path d="M22 12L12 6 2 12l10 6 10-6z" />
-				<path d="M6 18v-3" />
-				<path d="M18 18v-3" />
-			</svg>
-		)
-	}
-
-	function workIcon() {
-		return (
-			<svg xmlns="http://www.w3.org/2000/svg" className="xl:scale-125" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path d="M2 7h20v14H2z" />
-				<path d="M16 3h-8v4h8V3z" />
-			</svg>
-		)
-	}
+	const { t } = useTranslation("timeline");
+	const eventsArray = getTranslatedArray<EventsType>(t, "events", []);
 
 	return (
 		<section id="timeline" className="min-h-screen">
@@ -39,7 +22,7 @@ export default function Timeline() {
 						<VerticalTimelineElement
 							key={index}
 							date={time.date}
-							icon={time.type === "university" ? universityIcon() : workIcon()}
+							icon={time.type === "university" ? <University/> : <Work/>}
 							iconStyle={{ background: "#292929", color: "#fff" }}
 							contentStyle={{ backgroundColor: "#82828233" }}
 							dateClassName="text-white font-hubballi text-2xl md:text-3xl uppercase font-bold"

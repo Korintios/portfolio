@@ -18,11 +18,10 @@ export interface ServicesType extends CardType {
 
 export interface EventsType {
     date: string;
-    icon: () => JSX.Element;
     title: string;
     subtitle: string;
     description: string;
-    type: 'study' | 'work';
+    type: 'university' | 'work';
 }
 
 export type ProjectArrayType = Array<ProjectType>;
