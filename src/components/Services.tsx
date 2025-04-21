@@ -1,15 +1,12 @@
 import { useTranslation } from "react-i18next"
-import { ServicesType } from "../types";
+import { ServicesType, StatisticsType } from "../types";
+import { getTranslatedArray } from "../utils/lng";
 
 export default function Services() {
 
     const { t } = useTranslation("services")
-
-    const statisticsObjects = t("statistics", {returnObjects: true}) as Array<{value: string, label: string}>;
-    const statisticsArray = Array.isArray(statisticsObjects) ? statisticsObjects : [];
-
-    const servicesObjects = t("services", {returnObjects: true}) as Array<ServicesType>;
-    const servicesArray = Array.isArray(servicesObjects) ? servicesObjects : [];
+    const statisticsArray = getTranslatedArray<StatisticsType>(t, "statistics", []);
+    const servicesArray = getTranslatedArray<ServicesType>(t, "services", []);
 
     return (
         <section className="min-h-screen p-10 xl:p-20 flex flex-col gap-10">

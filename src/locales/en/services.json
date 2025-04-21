@@ -22,19 +22,19 @@
 		{
 			"title": "Modern Frontend Development",
 			"description": "Design and implementation of responsive, scalable, and user-focused interfaces using React, TypeScript, JavaScript, and TailwindCSS.",
-      "image": "gifs/frontend.gif",
+			"image": "gifs/frontend.gif",
 			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "React"]
 		},
 		{
 			"title": "Fullstack Development with PHP + MySQL",
 			"description": "Building complete applications with robust backend, relational databases, and custom admin panels.",
-      "image": "gifs/fullstack.gif",
+			"image": "gifs/fullstack.gif",
 			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "PHP", "MySQL"]
 		},
 		{
 			"title": "Technical Leadership & CTO",
 			"description": "Technical guidance for startups or small teams, helping define architecture, tools, workflows, and overall tech supervision.",
-      "image": "gifs/cto.gif",
+			"image": "gifs/cto.gif",
 			"tags": [
 				"Technical Leadership",
 				"Software Architecture",

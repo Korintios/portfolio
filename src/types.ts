@@ -9,6 +9,11 @@ export interface ProjectType extends CardType {
     github: string;
 }
 
+export interface StatisticsType {
+    value: string;
+    label: string;
+}
+
 export interface ServicesType extends CardType {
     statistics: {
         value: string;
