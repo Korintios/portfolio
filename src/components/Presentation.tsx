@@ -1,20 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { goToSection } from "../utils/sections";
+import IconCard from "./ui/IconCard";
+import SOCIALS from "../constants/socials";
+import SKILLS from "../constants/skills";
 
 export default function Presentation() {
 
 	const { t } = useTranslation("presentation")
-
-	function IconCard({src = "", href = undefined, isHover = false, isPulse = false}: {src: string, href?: string | undefined, isHover?: boolean, isPulse?: boolean}) {
-
-		const formatName = (src.split('/')[1].split('.')[0])
-
-		return (
-			<a href={href != undefined ? href : undefined} className={"size-[50px] xl:size-[77px] rounded-xl shadow-icon ring-2 ring-black flex items-center justify-center bg-gradient-to-b from-iconcard-gradient-start" + (isHover ? " cursor-pointer hover:from-iconcard-gradient-hover " : "") + " to-black"}>
-				<img className={(isPulse ? "animate-pulse " : "") + "scale-75 xl:scale-100"} src={src} alt={formatName} />
-			</a>
-		)
-	}
 
 	return (
 		<section id="presentation" className="min-h-screen sm:h-screen p-10 xl:p-20 flex flex-col justify-between">
@@ -31,18 +23,17 @@ export default function Presentation() {
 				<div className="flex flex-col gap-4">
 					<span className="uppercase text-primary font-poppins font-medium xl:text-xl text-left">{t('ctaText')}</span>
 					<div className="flex flex-wrap xl:flex-row gap-6">
-						<IconCard src="icons/linkedin.svg" href="https://www.linkedin.com/in/juan-camilo-vergara-marin-a50805263" isHover/>
-						<IconCard src="icons/github.svg" href="https://github.com/Korintios" isHover/>
-						<IconCard src="icons/phone.svg" href="https://wa.me/573147685292?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofreces%2C%20Juan%20Camilo%20V.M.%20%C2%BFPodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" isHover/>
-						<IconCard src="icons/email.svg" href="mailto:juanvergaram@outlook.com" isHover/>
+						{SOCIALS.map((social, index) => (
+							<IconCard color="#828282" key={index} icon={social.icon} href={social.url} isHover/>
+						))}
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">
 					<span className="uppercase text-primary font-poppins font-medium xl:text-xl xl:text-right">{t('skillsTitle')}</span>
 					<div className="flex flex-wrap xl:flex-row gap-6">
-						<IconCard src="icons/javascript.svg" isPulse/>
-						<IconCard src="icons/react.svg" isPulse/>
-						<IconCard src="icons/nextjs.svg" isPulse/>
+						{SKILLS.map((skill, index) => (
+							<IconCard key={index} icon={skill.icon}/>
+						))}
 					</div>
 				</div>
 			</div>
