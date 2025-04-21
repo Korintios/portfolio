@@ -52,25 +52,6 @@ export default function Footer() {
           <p className="text-sm text-info">
             &copy; {new Date().getFullYear()} {t('copyright')}
           </p>
-          <div className="mt-4 md:mt-0">
-            <ul className="flex space-x-4 text-xs text-info">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t('privacy')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t('terms')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  {t('cookies')}
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </footer>
