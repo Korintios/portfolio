@@ -7,9 +7,11 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 import { Autoplay, Pagination } from "swiper/modules";
+
 import { ProjectType } from "../types";
 import { DEFAULT_AUTOPLAY_OPTIONS, DEFAULT_BREAKPOINTS } from "../constants/sliders";
 import { getTranslatedArray } from "../utils/lng";
+
 import Github from "../assets/icons/socials/Github";
 import ExternalLink from "../assets/icons/ExternalLink";
 
