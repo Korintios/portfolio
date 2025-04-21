@@ -29,6 +29,14 @@ export interface EventsType {
     type: 'university' | 'work';
 }
 
+export interface TestimonialType {
+    name: string;
+    title: string;
+    image: string;
+    review: string;
+    score: number;
+}
+
 export type ProjectArrayType = Array<ProjectType>;
 
 export type badges = 'html' | 'css' | 'javascript' | 'react' | 'nodejs' | 'tailwindcss' | 'nextjs' | 'typescript' | 'sqlite' | 'prisma';
