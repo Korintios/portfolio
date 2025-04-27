@@ -30,7 +30,7 @@ export default function Projects() {
 
 				<div className="relative z-20 p-5 rounded-lg text-white flex flex-col justify-between h-full">
 					<div className="flex flex-row justify-between">
-						<a href={project.github}> <Github width={35} height={35} /> </a>
+						<a href={project.github}> <Github className="size-[35px]" /> </a>
 						{project.link && (<a href={project.link}> <ExternalLink /> </a>)}
 					</div>
 					<div className="flex flex-col gap-2">
