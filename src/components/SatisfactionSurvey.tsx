@@ -9,6 +9,7 @@ import { saveFeedback, validateAccessCode } from "../firebase";
 
 export default function SatisfactionSurvey() {
     const [isLoading, setIsLoading] = useState(true);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [isValidCode, setIsValidCode] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
@@ -29,21 +30,24 @@ export default function SatisfactionSurvey() {
     };
 
     const onSubmit = async (data: FeedbackFormType) => {
+        setIsSubmitting(true);
+        setError("");
+
         if (!data.name || !data.testimony || !data.rating || !data.image) {
             setError("Por favor complete todos los campos requeridos");
+            setIsSubmitting(false);
             return;
         }
         await saveFeedback({
             ...data,
             codeUsed: code || "",
         }).then(() => {
-            console.log("Datos enviados:", data);
             setSubmitted(true);
             setTimeout(() => {
                 navigate("/");
             }, 4500);
-        }).catch((error: string) => {
-            console.error("Error al enviar los datos:", error);
+        }).catch(() => {
+            setIsSubmitting(false);
             setError("Hubo un error al enviar los datos. Por favor, inténtelo de nuevo más tarde.");
         })
     };
@@ -101,7 +105,7 @@ export default function SatisfactionSurvey() {
                                     <PictureField onDrop={onDrop} />
 
                                     <div className="flex justify-end">
-                                        <button type="submit" className="font-poppins text-black font-semibold text-xs sm:text-sm xl:text-[14px] cursor-pointer min-w-[139px] px-4 min-h-[43.61px] rounded-xl bg-linear-to-b from-white to-button-gradient-to hover:to-button-gradient-to-hover">
+                                        <button disabled={isSubmitting} style={{opacity: isSubmitting ? 0.5 : 1, cursor: !isSubmitting ? "pointer" : "default"}} type="submit" className="font-poppins text-black font-semibold text-xs sm:text-sm xl:text-[14px] min-w-[139px] px-4 min-h-[43.61px] rounded-xl bg-linear-to-b from-white to-button-gradient-to hover:to-button-gradient-to-hover">
                                             Enviar testimonio
                                         </button>
                                     </div>
