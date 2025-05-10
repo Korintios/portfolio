@@ -45,7 +45,7 @@ export default function Projects() {
 						<div className="flex flex-col mt-1 gap-2 text-start">
 							<div className="flex flex-wrap gap-2 pointer-events-none">
 								{project.tags.map((tag, index: number) => (
-									<div key={index} className="border-2 border-info bg-black/30 text-[12px] px-2 py-1 rounded-full">
+									<div key={index} className="bg-black/30 text-[12px] px-2 py-1 rounded-full">
 										{tag}
 									</div>
 								))}
