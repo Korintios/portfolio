@@ -5,13 +5,13 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { FeedbackType } from "./types";
 
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
-  measurementId: ""
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
@@ -56,6 +56,25 @@ export async function getFeedback(): Promise<FeedbackType[]> {
   });
 }
 
+/**
+ * Guarda el feedback del usuario en Firestore y actualiza el estado del código de acceso usado.
+ *
+ * @param data - Objeto con los detalles del feedback:
+ *  - name: Nombre del usuario.
+ *  - email: (Opcional) Correo electrónico.
+ *  - phone: (Opcional) Teléfono.
+ *  - testimony: Testimonio o comentario.
+ *  - rating: Calificación (ej: 1-5).
+ *  - image: (Opcional) Archivo de imagen.
+ *  - codeUsed: Código de acceso usado.
+ *
+ * @returns Promesa que se resuelve al guardar el feedback y actualizar el código.
+ *
+ * @remarks
+ * - Si se proporciona una imagen, se sube a Firebase Storage y su URL se guarda.
+ * - El feedback se almacena en la colección "feedback".
+ * - El estado del código de acceso se actualiza a inactivo en "AccessCodes".
+ */
 export async function saveFeedback(data: {
   name: string;
   email?: string;
