@@ -30,8 +30,8 @@ export default function Projects() {
 
 				<div className="relative z-20 p-5 rounded-lg text-white flex flex-col justify-between h-full">
 					<div className="flex flex-row justify-between">
-						<a href={project.github}> <Github className="size-[35px]" /> </a>
-						{project.link && (<a href={project.link}> <ExternalLink /> </a>)}
+						<a href={project.github}> <Github className="size-[35px] hover:scale-105" /> </a>
+						{project.link && (<a href={project.link} className="hover:scale-105"> <ExternalLink /> </a>)}
 					</div>
 					<div className="flex flex-col gap-2">
 						<div className="flex flex-col gap-2 text-start">
@@ -42,13 +42,10 @@ export default function Projects() {
 								{project.description}
 							</p>
 						</div>
-						<div className="flex flex-col gap-2 text-start">
-							<h2 className="font-poppins text-xl font-normal text-white/50">
-								{t('technologies')}
-							</h2>
+						<div className="flex flex-col mt-1 gap-2 text-start">
 							<div className="flex flex-wrap gap-2 pointer-events-none">
 								{project.tags.map((tag, index: number) => (
-									<div key={index} className="border-2 border-info bg-iconcard-gradient-hover text-[12px] px-2 py-1 rounded-full">
+									<div key={index} className="border-2 border-info bg-black/30 text-[12px] px-2 py-1 rounded-full">
 										{tag}
 									</div>
 								))}
