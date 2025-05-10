@@ -7,20 +7,21 @@ import Star from "../assets/icons/Star";
 import { useTranslation } from "react-i18next";
 
 import { DEFAULT_AUTOPLAY_OPTIONS, DEFAULT_BREAKPOINTS } from "../constants/sliders";
-import { TestimonialType } from "../types";
-import { getTranslatedArray } from "../utils/lng";
+import { FeedbackType } from "../types";
+import { useEffect, useState } from "react";
+import { getFeedback } from "../firebase";
 
 export default function Testimonials() {
 
 	const { t } = useTranslation("testimonials");
-	const reviewsArray = getTranslatedArray<TestimonialType>(t, "reviews", []);
+	const [feedbackList, setFeedbackList] = useState<FeedbackType[]>([]);
 
-	const Testimonial = ({testimonial}: {testimonial: TestimonialType}) => {
+	const Testimonial = ({testimonial}: {testimonial: FeedbackType}) => {
 		return (
 			<div className="flex flex-col gap-3 h-auto bg-white/10 p-3 rounded-md text-white">
 				<div className="flex flex-row items-center gap-3">
 					<img
-						src={testimonial.image}
+						src={testimonial.imageUrl}
 						alt="logo"
 						className="bg-blue-500 rounded-full size-12 object-cover"
 					/>
@@ -33,22 +34,29 @@ export default function Testimonials() {
 				</div>
 				<div className="flex flex-row items-center gap-3">
 					<div className="flex flex-row gap-2">
-						<Star />
-						<Star />
-						<Star />
-						<Star />
-						<Star />
+						{Array.from({length: testimonial.rating}).map((_, index) => (
+							<Star key={index} color="#fd853a"/>
+						))}
+						{Array.from({length: 5 - testimonial.rating}).map((_, index) => (
+							<Star key={index} color="#ccc"/>
+						))}
 					</div>
 					<span className="text-2xl font-poppins font-medium">
-						{testimonial.score.toFixed(1)}
+						{testimonial.rating}
 					</span>
 				</div>
 				<p className="text-start text-sm font-normal font-poppins leading-relaxed whitespace-normal">
-					{testimonial.review}
+					{testimonial.testimony}
 				</p>
 			</div>
 		)
 	}
+
+	useEffect(() => {
+		getFeedback().then((feedback) => {
+			setFeedbackList(feedback);
+		});
+	}, []);
 
 	return (
 		<section id="testimonials" className="min-h-screen flex items-center justify-center">
@@ -69,7 +77,7 @@ export default function Testimonials() {
 					slidesPerView={4}
 					spaceBetween={30}
 					centeredSlides
-					loop
+					loop={feedbackList.length > 3}
 					modules={[Autoplay]}
 					pagination={{
 						clickable: true,
@@ -78,7 +86,7 @@ export default function Testimonials() {
 					speed={6500}
 					breakpoints={DEFAULT_BREAKPOINTS}
 				>
-					{reviewsArray.concat(reviewsArray).map((testimonial, index) => (
+					{feedbackList.map((testimonial, index) => (
 						<SwiperSlide key={index}>
 							<Testimonial testimonial={testimonial} />
 						</SwiperSlide>

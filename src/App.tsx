@@ -1,9 +1,10 @@
-import Portfolio from "./components/Portfolio";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
 function App() {
   return (
     <main className="h-screen overflow-x-hidden relative">
-      <Portfolio/>
+      <RouterProvider router={router} />
     </main>
   );
 }
