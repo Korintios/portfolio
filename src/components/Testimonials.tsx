@@ -28,7 +28,7 @@ export default function Testimonials() {
 						className="bg-blue-500 rounded-full size-12 object-cover"
 					/>
 					<div className="flex flex-col items-start">
-						<span className="text-lg font-poppins font-semibold h-[21px] truncate">
+						<span className="text-lg font-poppins font-semibold h-[25px] truncate">
 							{testimonial.name}
 						</span>
 						<span className="text-md font-hubballi text-left">
