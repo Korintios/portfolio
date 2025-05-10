@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, addDoc, serverTimestamp, doc, getDoc, query, orderBy, getDocs, updateDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, serverTimestamp, doc, getDoc, query, orderBy, getDocs, updateDoc, where } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { FeedbackType } from "./types";
 
@@ -84,6 +84,16 @@ export async function saveFeedback(data: {
   image?: File;
   codeUsed: string;
 }) {
+  const feedbackQuery = query(
+    collection(db, "feedback"),
+    where("codeUsed", "==", data.codeUsed)
+  );
+  const existing = await getDocs(feedbackQuery);
+
+  if (!existing.empty) {
+    throw new Error("Este código ya fue utilizado para enviar un testimonio.");
+  }
+
   let imageUrl = "";
 
   if (data.image) {
@@ -112,5 +122,6 @@ export async function saveFeedback(data: {
 
   console.log("Feedback guardado con éxito");
 }
+
 
 export default { app, analytics };

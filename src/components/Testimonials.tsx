@@ -53,8 +53,22 @@ export default function Testimonials() {
 	}
 
 	useEffect(() => {
+		const cacheKey = "feedbackCache";
+		const cached = localStorage.getItem(cacheKey);
+		const expiresIn = 1000 * 60 * 60;
+		const now = Date.now();
+
+		if (cached) {
+			const { data, timestamp } = JSON.parse(cached);
+			if (now - timestamp < expiresIn) {
+			setFeedbackList(data);
+			return;
+			}
+		}
+
 		getFeedback().then((feedback) => {
 			setFeedbackList(feedback);
+			localStorage.setItem(cacheKey, JSON.stringify({ data: feedback, timestamp: now }));
 		});
 	}, []);
 
