@@ -45,3 +45,20 @@ export interface SectionsType {
 export type ProjectArrayType = Array<ProjectType>;
 
 export type badges = 'html' | 'css' | 'javascript' | 'react' | 'nodejs' | 'tailwindcss' | 'nextjs' | 'typescript' | 'sqlite' | 'prisma';
+
+export interface FeedbackFormType {
+    name: string;
+    email?: string;
+    phone?: string;
+    title?: string;
+    testimony: string;
+    rating: number;
+    image?: File;
+    codeUsed?: string;
+}
+
+export interface FeedbackType extends FeedbackFormType {
+    id: string;
+    usedAt: string;
+    imageUrl: string;
+}
