@@ -87,7 +87,7 @@ export default function SatisfactionSurvey() {
                                 </div>
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                                     {error && (
-                                    <div className="p-3 bg-red-800 bg-opacity-30 rounded-md text-white text-sm">
+                                    <div className="p-3 bg-red-900/50 bg-opacity-30 rounded-md text-white text-sm">
                                         {error}
                                     </div>
                                     )}
