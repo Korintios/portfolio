@@ -6,17 +6,19 @@ import "swiper/css";
 import Star from "../assets/icons/Star";
 import { useTranslation } from "react-i18next";
 
-import { DEFAULT_AUTOPLAY_OPTIONS, DEFAULT_BREAKPOINTS } from "../constants/sliders";
+import {
+	DEFAULT_AUTOPLAY_OPTIONS,
+	DEFAULT_BREAKPOINTS,
+} from "../constants/sliders";
 import { FeedbackType } from "../types";
 import { useEffect, useState } from "react";
 import { getFeedback } from "../firebase";
 
 export default function Testimonials() {
-
 	const { t } = useTranslation("testimonials");
 	const [feedbackList, setFeedbackList] = useState<FeedbackType[]>([]);
 
-	const Testimonial = ({testimonial}: {testimonial: FeedbackType}) => {
+	const Testimonial = ({ testimonial }: { testimonial: FeedbackType }) => {
 		return (
 			<div className="flex flex-col gap-3 h-auto bg-white/10 p-3 rounded-md text-white">
 				<div className="flex flex-row items-center gap-3">
@@ -29,16 +31,18 @@ export default function Testimonials() {
 						<span className="text-lg font-poppins font-semibold h-[21px] truncate">
 							{testimonial.name}
 						</span>
-						<span className="text-md font-hubballi text-left">{testimonial.title}</span>
+						<span className="text-md font-hubballi text-left">
+							{testimonial.title}
+						</span>
 					</div>
 				</div>
 				<div className="flex flex-row items-center gap-3">
 					<div className="flex flex-row gap-2">
-						{Array.from({length: testimonial.rating}).map((_, index) => (
-							<Star key={index} color="#fd853a"/>
+						{Array.from({ length: testimonial.rating }).map((_, index) => (
+							<Star key={index} color="#fd853a" />
 						))}
-						{Array.from({length: 5 - testimonial.rating}).map((_, index) => (
-							<Star key={index} color="#ccc"/>
+						{Array.from({ length: 5 - testimonial.rating }).map((_, index) => (
+							<Star key={index} color="#ccc" />
 						))}
 					</div>
 					<span className="text-2xl font-poppins font-medium">
@@ -49,8 +53,8 @@ export default function Testimonials() {
 					{testimonial.testimony}
 				</p>
 			</div>
-		)
-	}
+		);
+	};
 
 	useEffect(() => {
 		const cacheKey = "feedbackCache";
@@ -61,20 +65,33 @@ export default function Testimonials() {
 		if (cached) {
 			const { data, timestamp } = JSON.parse(cached);
 			if (now - timestamp < expiresIn) {
-			setFeedbackList(data);
-			return;
+				setFeedbackList(data);
+				return;
 			}
 		}
 
 		getFeedback().then((feedback) => {
 			setFeedbackList(feedback);
-			localStorage.setItem(cacheKey, JSON.stringify({ data: feedback, timestamp: now }));
+			localStorage.setItem(
+				cacheKey,
+				JSON.stringify({ data: feedback, timestamp: now })
+			);
 		});
 	}, []);
 
 	return (
-		<section id="testimonials" className="min-h-screen flex items-center justify-center">
-			<video src="videos/one.mp4" typeof="video/mp4" className="absolute w-full h-full object-cover z-0" autoPlay muted loop/>
+		<section
+			id="testimonials"
+			className="min-h-screen flex items-center justify-center"
+		>
+			<video
+				src="videos/one.webm"
+				typeof="video/webm"
+				className="absolute w-full h-full object-cover z-0"
+				autoPlay
+				muted
+				loop
+			/>
 
 			<div className="absolute w-full h-full bg-black/70 z-10" />
 
@@ -87,7 +104,7 @@ export default function Testimonials() {
 						{t("description")}
 					</p>
 				</div>
-				<Swiper 
+				<Swiper
 					slidesPerView={4}
 					spaceBetween={30}
 					centeredSlides
