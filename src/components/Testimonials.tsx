@@ -22,11 +22,14 @@ export default function Testimonials() {
 		return (
 			<div className="flex flex-col gap-3 h-auto bg-white/10 p-3 rounded-md text-white">
 				<div className="flex flex-row items-center gap-3">
-					<img
+					{testimonial.imageUrl ? (
+						<img
 						src={testimonial.imageUrl}
-						alt="logo"
-						className="bg-blue-500 rounded-full size-12 object-cover"
+						className="bg-info rounded-full size-12 object-cover"
 					/>
+					) : (
+						<span className="bg-info/80 text-xl font-semibold rounded-full size-12 object-cover grid items-center justify-center uppercase">{testimonial.name.slice(0,2)}</span>
+					)}
 					<div className="flex flex-col items-start">
 						<span className="text-lg font-poppins font-semibold h-[25px] truncate">
 							{testimonial.name}
