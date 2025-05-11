@@ -33,7 +33,7 @@ export default function SatisfactionSurvey() {
         setIsSubmitting(true);
         setError("");
 
-        if (!data.name || !data.testimony || !data.rating || !data.image) {
+        if (!data.name || !data.testimony || !data.rating) {
             setError("Por favor complete todos los campos requeridos");
             setIsSubmitting(false);
             return;
@@ -96,7 +96,7 @@ export default function SatisfactionSurvey() {
                                     </div>
                                     )}
 
-                                    <InputField label="Nombre" id="name" type="text" required={true} />
+                                    <InputField label="Nombre y Apellido" id="name" type="text" required={true} />
                                     <InputField label="Correo electrónico" id="email" type="text" />
                                     <InputField label="Teléfono" id="phone" type="text" required={false} />
                                     <InputField label="Testimonio" id="testimony" type="textarea" required={true} />

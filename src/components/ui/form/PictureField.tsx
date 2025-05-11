@@ -1,6 +1,6 @@
 import { useDropzone } from "react-dropzone";
 
-const PictureField = ({onDrop}: {onDrop: (acceptedFiles: File[]) => void}) => {
+const PictureField = ({onDrop, required = false}: {onDrop: (acceptedFiles: File[]) => void, required?: boolean }) => {
 
      const { getRootProps, getInputProps, acceptedFiles, isDragActive } = useDropzone({
         accept: { "image/*": [] },
@@ -11,7 +11,7 @@ const PictureField = ({onDrop}: {onDrop: (acceptedFiles: File[]) => void}) => {
     return (
         <div>
             <label className="block text-sm font-medium text-gray-300 mb-2">
-                Foto <span className="text-red-500">*</span>
+                Foto {required && <span className="text-red-500">*</span>}
             </label>
             <div {...getRootProps()} className="border-2 border-dashed border-info p-6 rounded cursor-pointer text-center">
                 <input {...getInputProps()} />
