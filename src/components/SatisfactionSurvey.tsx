@@ -85,8 +85,8 @@ export default function SatisfactionSurvey() {
                             <>
                                 <div className="text-center mb-8">
                                     <h2 className="text-3xl font-extrabold text-white">Encuesta de Satisfacción</h2>
-                                    <p className="mt-4 text-lg text-gray-300">
-                                        Su opinión es importante para nosotros. Ayúdenos a mejorar completando esta encuesta.
+                                    <p className="mt-4 text-md text-gray-300">
+                                        Tu opinión es muy valiosa para mí, ya que me permite crecer y seguir mejorando profesionalmente.
                                     </p>
                                 </div>
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -104,8 +104,17 @@ export default function SatisfactionSurvey() {
                                     
                                     <PictureField onDrop={onDrop} />
 
-                                    <div className="flex justify-end">
-                                        <button disabled={isSubmitting} style={{opacity: isSubmitting ? 0.5 : 1, cursor: !isSubmitting ? "pointer" : "default"}} type="submit" className="font-poppins text-black font-semibold text-xs sm:text-sm xl:text-[14px] min-w-[139px] px-4 min-h-[43.61px] rounded-xl bg-linear-to-b from-white to-button-gradient-to hover:to-button-gradient-to-hover">
+                                    <div className="text-center mb-6">
+                                        <p className="mt-4 text-sm text-right text-gray-300/50">
+                                            Tu testimonio, junto con tu nombre y foto (opcional), podrá mostrarse en la sección de testimonios para brindar confianza a futuros visitantes.<br />
+                                            
+                                        </p>
+                                        
+                                    </div>
+
+                                    <div className="flex justify-between items-center">
+                                        <p className="text-sm text-gray-300">¡Gracias por tu tiempo y por formar parte de este proceso!</p>
+                                        <button disabled={isSubmitting} style={{opacity: isSubmitting ? 0.5 : undefined, cursor: !isSubmitting ? "pointer" : "default"}} type="submit" className="font-poppins text-black font-semibold text-xs sm:text-sm xl:text-[14px] min-w-[139px] px-4 min-h-[43.61px] rounded-xl bg-linear-to-b hover:opacity-75 from-white to-button-gradient-to">
                                             Enviar testimonio
                                         </button>
                                     </div>
