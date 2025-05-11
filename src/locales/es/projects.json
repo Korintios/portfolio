@@ -5,7 +5,7 @@
             {
                 "title": "Aplicacion de Peluqueria",
                 "description": "Aplicacion de peluqueria para gestionar citas, clientes, servicios y productos.",
-                "image": "images/projects/hairsalon.jpg",
+                "image": "images/projects/hairsalon.webp",
                 "link": "https://hair-salon-app.onrender.com",
                 "github": "https://github.com/Korintios/hair_salon-app",
                 "tags": ["HTML","CSS","TailwindCSS","JavaScript","NodeJS","Prisma","React","NextJS","SQLite"]
@@ -13,7 +13,7 @@
             {
                 "title": "Proyecto Math",
                 "description": "Proyecto de matematicas para resolver problemas matematicos.",
-                "image": "images/projects/math.jpg",
+                "image": "images/projects/math.webp",
                 "link": "https://project-math-one.vercel.app/",
                 "github": "https://github.com/Korintios/project-math",
                 "tags": ["HTML","CSS","TailwindCSS","JavaScript","NodeJS","React","NextJS"]
@@ -21,21 +21,21 @@
             {
                 "title": "EasyferrumJS",
                 "description": "Libreria de JavaScript para obtener datos de la aplicacion universitaria de la universidad comfenalco.",
-                "image": "images/projects/easyferrumjs.jpg",
+                "image": "images/projects/easyferrumjs.webp",
                 "github": "https://github.com/Korintios/easyferrumjs",
                 "tags": ["JavaScript","NodeJS"]
             },
             {
                 "title": "MiLogin",
                 "description": "Plugin de Minecraft enfocado a la seguridad al momento de autenticarse en los servidores",
-                "image": "images/projects/milogin.jpg",
+                "image": "images/projects/milogin.webp",
                 "github": "https://github.com/Korintios/milogin",
                 "tags": ["Java"]
             },
             {
                 "title": "Aplicacion de Bingo",
                 "description": "Aplicacion de bingo para crear tus propios cartones personalizados y imprimirlos.",
-                "image": "images/projects/bingo.jpg",
+                "image": "images/projects/bingo.webp",
                 "link": "https://bingo-app-theta.vercel.app/",
                 "github": "https://github.com/Korintios/bingo-app",
                 "tags": ["HTML","CSS","TailwindCSS","TypeScript","NodeJS","React","NextJS"]
@@ -43,7 +43,7 @@
             {
                 "title": "Aplicacion de Tareas",
                 "description": "Aplicacion de tareas para gestionar tus tareas pendientes.",
-                "image": "images/projects/todo.jpg",
+                "image": "images/projects/todo.webp",
                 "link": "https://korintios.github.io/todo-app/",
                 "github": "https://github.com/Korintios/todo-app",
                 "tags": ["HTML","CSS","JavaScript"]

@@ -5,7 +5,7 @@
 		{
 			"title": "Hair Salon App",
 			"description": "Hair salon application to manage appointments, clients, services, and products.",
-			"image": "images/projects/hairsalon.jpg",
+			"image": "images/projects/hairsalon.webp",
 			"link": "https://hair-salon-app.onrender.com",
 			"github": "https://github.com/Korintios/hair_salon-app",
 			"tags": [
@@ -23,7 +23,7 @@
 		{
 			"title": "Math Project",
 			"description": "Math project to solve mathematical problems.",
-			"image": "images/projects/math.jpg",
+			"image": "images/projects/math.webp",
 			"link": "https://project-math-one.vercel.app/",
 			"github": "https://github.com/Korintios/project-math",
 			"tags": ["HTML", "CSS", "TailwindCSS", "JavaScript", "NodeJS", "React", "NextJS"]
@@ -31,21 +31,21 @@
 		{
 			"title": "EasyferrumJS",
 			"description": "JavaScript library to retrieve data from the university app of Comfenalco University.",
-			"image": "images/projects/easyferrumjs.jpg",
+			"image": "images/projects/easyferrumjs.webp",
 			"github": "https://github.com/Korintios/easyferrumjs",
 			"tags": ["JavaScript", "NodeJS"]
 		},
 		{
 			"title": "MiLogin",
 			"description": "Minecraft plugin focused on authentication security on servers.",
-			"image": "images/projects/milogin.jpg",
+			"image": "images/projects/milogin.webp",
 			"github": "https://github.com/Korintios/milogin",
 			"tags": ["Java"]
 		},
 		{
 			"title": "Bingo App",
 			"description": "Bingo application to create your own customized cards and print them.",
-			"image": "images/projects/bingo.jpg",
+			"image": "images/projects/bingo.webp",
 			"link": "https://bingo-app-theta.vercel.app/",
 			"github": "https://github.com/Korintios/bingo-app",
 			"tags": ["HTML", "CSS", "TailwindCSS", "TypeScript", "NodeJS", "React", "NextJS"]
@@ -53,7 +53,7 @@
 		{
 			"title": "To-Do App",
 			"description": "To-do app to manage your pending tasks.",
-			"image": "images/projects/todo.jpg",
+			"image": "images/projects/todo.webp",
 			"link": "https://korintios.github.io/todo-app/",
 			"github": "https://github.com/Korintios/todo-app",
 			"tags": ["HTML", "CSS", "JavaScript"]
