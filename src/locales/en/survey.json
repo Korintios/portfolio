@@ -1,0 +1,36 @@
+{
+	"invalidCode": {
+		"title": "Your Code is Invalid",
+		"message": "You need an access code to access this section."
+	},
+	"thankyou": {
+		"title": "Thank you for your feedback!",
+		"message": "Your testimonial has been successfully submitted, you will return to the main page shortly..."
+	},
+	"form": {
+		"title": "Satisfaction Survey",
+		"subtitle": "Your opinion is very valuable to me, as it allows me to grow and continue improving professionally.",
+		"errors": {
+			"required": "Please complete all required fields",
+			"submission": "There was an error submitting the data. Please try again later."
+		},
+		"fields": {
+			"name": "Full Name",
+			"email": "Email",
+			"phone": "Phone",
+			"testimony": "Testimonial",
+			"rating": "Rating",
+			"ratingSelect": "Select a rating",
+			"ratingValue": "{{count}} out of 5 stars",
+			"photo": "Photo",
+			"dropzone": {
+				"active": "Drop the image here!",
+				"inactive": "Drag an image here or click to select",
+				"uploaded": "✔️ "
+			}
+		},
+		"disclaimer": "Your testimonial, along with your name and photo (optional), may be displayed in the testimonials section to build trust with future visitors.",
+		"thanks": "Thank you for your time and for being part of this process!",
+		"submit": "Submit testimonial"
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"invalidCode": {
+		"title": "Tu Código no es Válido",
+		"message": "Necesitas un código de acceso para acceder a esta sección."
+	},
+	"thankyou": {
+		"title": "¡Gracias por su opinión!",
+		"message": "Su testimonio ha sido enviado con éxito, volverás a la página principal en breve..."
+	},
+	"form": {
+		"title": "Encuesta de Satisfacción",
+		"subtitle": "Tu opinión es muy valiosa para mí, ya que me permite crecer y seguir mejorando profesionalmente.",
+		"errors": {
+			"required": "Por favor complete todos los campos requeridos",
+			"submission": "Hubo un error al enviar los datos. Por favor, inténtelo de nuevo más tarde."
+		},
+		"fields": {
+			"name": "Nombre y Apellido",
+			"email": "Correo electrónico",
+			"phone": "Teléfono",
+			"testimony": "Testimonio",
+			"rating": "Calificación",
+			"ratingSelect": "Seleccione una calificación",
+			"ratingValue": "{{count}} de 5 estrellas",
+			"photo": "Foto",
+			"dropzone": {
+				"active": "¡Suelta la imagen aquí!",
+				"inactive": "Arrastra una imagen aquí o haz clic para seleccionar",
+				"uploaded": "✔️ "
+			}
+		},
+		"disclaimer": "Tu testimonio, junto con tu nombre y foto (opcional), podrá mostrarse en la sección de testimonios para brindar confianza a futuros visitantes.",
+		"thanks": "¡Gracias por tu tiempo y por formar parte de este proceso!",
+		"submit": "Enviar testimonio"
+	}
+}
