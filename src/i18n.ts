@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 // Importing translations for Spanish and English
 
@@ -23,7 +24,9 @@ import TESTIMONIALS_EN from "./locales/en/testimonials.json";
 import FOOTER_EN from "./locales/en/footer.json";
 import SURVEY_EN from "./locales/en/survey.json";
 
-i18n.use(initReactI18next).init({
+i18n
+.use(LanguageDetector)
+.use(initReactI18next).init({
 	resources: {
 		es: {
 			presentation: PRESENTATION_ES,
@@ -46,7 +49,6 @@ i18n.use(initReactI18next).init({
 			survey: SURVEY_EN,
 		},
 	},
-	lng: "en",
 	fallbackLng: "en",
 	ns: [
 		"presentation",
