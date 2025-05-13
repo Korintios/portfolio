@@ -120,7 +120,7 @@ export default function Testimonials() {
 					speed={6500}
 					breakpoints={DEFAULT_BREAKPOINTS}
 				>
-					{feedbackList.map((testimonial, index) => (
+					{feedbackList.concat(feedbackList).map((testimonial, index) => (
 						<SwiperSlide key={index}>
 							<Testimonial testimonial={testimonial} />
 						</SwiperSlide>
